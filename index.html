@@ -9,8 +9,46 @@
   <meta charset="uft-8">
   <meta charset="uft-8">
   <meta name="color-scheme" content="dark light">
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #1a1a1a;
+  padding-top: 40px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.sidebar a {
+  display: block;
+  color: #eee;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar a:hover {
+  background-color: #333;
+}
+
+.content {
+  margin-left: 220px;
+}
+
 <body>
+
+  <div class="sidebar">
+  <a href="#home">Home</a>
+  <a href="#blog">Blog</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+</div>
+<div class="content">
   
+
+
 
 
   <h1 style="color:pink; text-align: center; font-size: 75px;">Caz.com</h1>
@@ -283,6 +321,7 @@ There were spots of light against a grey static-y background. Sunshine was pouri
             
             
             </p>
+</div>
 </font>        
 </body>
 </html>

@@ -1,154 +1,273 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
- /* Sidebar styling */
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 200px;
-  height: 100%;
-  background-color: #1a1a1a;
-  padding-top: 40px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-}
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Caz.com</title>
+    <style>
+      body {
+        background-color: #222;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-.sidebar a {
-  display: block;
-  color: #eee;
-  padding: 15px 20px;
-  text-decoration: none;
-  font-size: 18px;
-}
+      /* Sidebar styles */
+      .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 220px;
+        height: 100vh;
+        background-color: #111;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+      }
 
-.sidebar a:hover {
-  background-color: #333;
-}
+      .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin: 15px 0;
+        font-weight: bold;
+        font-size: 18px;
+      }
 
-.content {
-  margin-left: 220px;
-}
+      .sidebar a:hover {
+        color: pink;
+      }
 
-  <title>Caz.com</title>
-</style>
-  <img src="https://media.tenor.com/SRDuFks8igEAAAAi/kirby.gif" width="10%" height="auto" style="position: absolute; left: 300px; top: 12px; alt="Kirby floating" />
-  <img src="https://media.tenor.com/Mreg30jYSooAAAAi/christmas-tree-christmas-lights.gif" width="8%" height="auto" style="position: absolute; left: 1050px; top: 18px; alt="Spinning Toyota" />
-  <img src="https://media.tenor.com/LtaH0AouMOsAAAAi/pizza.gif" width="10%" height="auto" style="position: absolute; left: 100px; top: 70px; alt="Spinning Toyota" />
-  <meta charset="uft-8">
-  <meta charset="uft-8">
-  <meta name="color-scheme" content="dark light">
+      /* Main content */
+      main.content {
+        margin-left: 240px;
+        padding: 20px 40px;
+      }
 
-<div class="content">
-  
+      h1 {
+        color: pink;
+        font-size: 75px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        margin-left: 70px; /* nudged right */
+      }
+
+      /* Nudge the first two paragraphs below h1 */
+      .content > p:first-of-type,
+      .content > p:nth-of-type(2) {
+        margin-left: 70px;
+        text-align: center;
+        font-size: 19px;
+      }
+
+      h2 {
+        color: #f0a;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+      }
+
+      /* Positioning the floating GIFs */
+      .floating-gif {
+        position: absolute;
+        height: auto;
+      }
+
+      .kirby {
+        left: 500px;
+        top: 12px;
+        width: 10%;
+      }
+
+      .pizza {
+        left: 1200px;
+        top: 70px;
+        width: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Floating GIFs -->
+    <img
+      src="https://media.tenor.com/SRDuFks8igEAAAAi/kirby.gif"
+      alt="Kirby floating"
+      class="floating-gif kirby"
+   
+    />
+    <img
+      src="https://media.tenor.com/LtaH0AouMOsAAAAi/pizza.gif"
+      alt="Spinning Pizza"
+      class="floating-gif pizza"
+    />
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <a href="#summer-games-fest-2025">Summer Games Fest 2025</a>
+      <a href="#modding-8bitdo-arcade">Modding My 8BitDo Arcade Stick</a>
+      <a href="#nintendo-switch-2-announced">Nintendo Switch 2 Announcement</a>
+      <a href="#making-a-video-game-day-1">Making a Video Game</a>
+      <a href="#behind-the-scenes-html">Behind The Scenes: HTML</a>
+      <a href="#positioning-gifs">Positioning GIFs</a>
+      <a href="#monster-hunter-gu-save-transfer">Monster Hunter GU Save Transfer</a>
+      <a href="#game-review">The Typing of the Dead</a>
+      <a href="#hiking-through-japan-kumano-kodo">Hiking through Japan: Kumano Kodo</a>
+      <a href="#elden-ring">Elden Ring</a>
+      <a href="#kirby's-adventure-3ds">Kirby's Adventure 3DS</a>
+    </nav>
+
+    <!-- Main content -->
+    <main class="content">
+      <h1>Caz.com</h1>
+
+      <p>
+        This is a page I designed using HTML. It acts as a blog, review site and
+        general mish mash of things I'm working on. I hope you like it!
+      </p>
+      <p>
+        You can check out my socials here:
+        <a href="https://www.facebook.com/casimiryiontis/">Facebook</a>,
+        <a href="https://www.instagram.com/cpyiontis/">Instagram</a>
+      </p>
+
+<h2 id="summer-games-fest-2025">Summer Games Fest 2025</h2>
+      <p><em>07/06/2025</em></p>
+      <img src="https://cdn.mos.cms.futurecdn.net/pAgh4TNRRiPZKoPYGrHptS-970-80.jpg" alt="Line Void progress" />
+
+<h2 id="modding-8bitdo-arcade">Modding My 8BitDo Arcade Stick</h2>
+      <p><em>12/05/2025</em></p>
+      <img src="https://i.imgur.com/PjYn79f.jpeg" alt="Line Void progress" />
+
+<h2 id="nintendo-switch-2-announced">Nintendo Switch 2 Announced</h2>
+      <p><em>03/04/2025</em></p>
+      <img src="https://cdn.mos.cms.futurecdn.net/7BeJaCY6Jzprdd7cdinRd-970-80.jpg" alt="Line Void progress" />
+
+      <p style="font-size: 20px">Nintendo has officially announced the Nintendo Switch 2, set to launch on June 5, 2025, with a starting price of $449.99 AUD. This next-generation hybrid console builds upon the success of its predecessor, introducing significant hardware upgrades and new features designed to enhance the gaming experience.</p>
+<p style="font-size: 20px">The Switch 2 boasts a 7.9-inch 1080p LCD touchscreen with HDR10 support and a 120Hz refresh rate, offering sharper visuals and smoother gameplay. Powered by a custom Nvidia Tegra processor, the console supports 4K resolution when docked, providing a substantial performance boost over the original Switch.</p>
+<p style="font-size: 20px">Storage capacity has been increased to 256GB, expandable via microSD Express cards. Connectivity options include Wi-Fi 6 and Bluetooth support, ensuring faster and more stable connections. The console also features improved battery life, catering to gamers on the go.</p>
+<p style="font-size: 20px">The new Joy-Con 2 controllers attach magnetically and introduce optical mouse-sensor functionality, allowing for precise control in compatible games. These controllers also support a new feature called GameChat, enabling voice and video communication during gameplay.</p>
+<p style="font-size: 20px">At launch, the Switch 2 will be accompanied by titles such as Mario Kart World. The console maintains backward compatibility with most Nintendo Switch games, ensuring a seamless transition for existing users. Additionally, select titles will receive performance enhancements when played on the new hardware.</p>
+<p style="font-size: 20px">Pre-orders for the Switch 2 began on April 24, 2025, and were met with overwhelming demand, leading to rapid sellouts and website crashes at major retailers like Walmart, Best Buy, and GameStop. Nintendo has implemented an invitation-based pre-order system through the My Nintendo Store, prioritizing users with active Nintendo Switch Online memberships and significant playtime history. Despite these measures, the company has acknowledged potential delays in order fulfillment due to high demand.</p>
+<p style="font-size: 20px">The standard Switch 2 is priced at $449.99 AUD, while a bundle including Mario Kart World is available for $499.99 AUD. Accessory prices have seen increases, attributed in part to new tariffs affecting manufacturing costs.</p>
+<p style="font-size: 20px">The Nintendo Switch 2 represents a significant advancement in hybrid gaming, offering enhanced performance, innovative features, and a huge game library. While pre-order challenges persist, the console's launch is primed to be a major event in gaming this year.</p>
+
+<p style="font-size: 20px">Written by Casimir Yiontis
 
 
+      <h2 id="making-a-video-game-day-1">Making a Video Game</h2>
+      <p><em>12/11/2024</em></p>
+      <img src="https://i.imgur.com/Ocuh3Cq.png" alt="Line Void progress" />
+      <p>
+        My progress so far on "Line Void" (Title work in progress), a space shmup
+        game. Right now I'm just following a tutorial on YouTube that's teaching me
+        how to make Asteroids, which is why the project is called "Asteroids".
+      </p>
+      <p>Currently I'm able to accelerate and rotate the ship.</p>
+      <p>
+        I'm excited to start working on the ship sprites. Hopefully will be easy
+        to import them into Unity.
+      </p>
 
+      <h2 id="behind-the-scenes-html">Behind The Scenes: HTML</h2>
+      <p><em>01/11/2024</em></p>
+      <img src="https://i.imgur.com/sXy89Hd.png" alt="HTML code screenshot" />
+      <p>This is the code I used to make this website.</p>
+      <p>The one you're looking at right now.</p>
 
-  <h1 style="color:pink; text-align: center; font-size: 75px;">Caz.com</h1>
-  <p style="text-align: center; font-size: 19px">This is a page I designed using HTML. It acts as a blog, review site and general mish mash of things I'm working on. I hope you like it!
-  
-    <p style="text-align: center; font-size: 19px">You can check out my socials here: <a href=https://www.facebook.com/casimiryiontis/>Facebook</a>, <a href="https://www.instagram.com/cpyiontis/">Instagram</a></p>
+      <h2 id="positioning-gifs">Positioning GIFs</h2>
+      <p><em>01/11/2024</em></p>
+      <p>
+        I moved my Kirby Floating Gif so now it's next to the Page Title :D Lookin'
+        good, Kirby. Hang in there, buddy.
+      </p>
 
-    <h2>Making a Video Game: Day 1</h2>
-    <p><em>12/11/2024</em></p>
+      <h2 id="monster-hunter-gu-save-transfer">Monster Hunter GU Save Transfer</h2>
+      <p><em>20/08/2024</em></p>
+      <p>
+        This week I made a return to Monster Hunter, one of my all time favourite
+        franchises. Specifically Monster Hunter Generations Ultimate, a 1080p high
+        resolution remake of the game originally released on the 3DS. Because the
+        eShop closed down in April, I was unable to make use of the Save data
+        transfer tool that was designed specifically to port your save from the 3DS
+        to the Switch. However, I managed to track down a Save Editor online and
+        through a ridiculously laborious process that took me over two days, I
+        managed to get my old save onto the Switch with a little help from my old
+        friend Hex Editor.
+      </p>
 
-    <img src="https://i.imgur.com/Ocuh3Cq.png" width="50%"
-    height="auto">
-    <p style="font-size: 20px">My progress so far on "Line Void" (Title work in progress), a space shmup game. Right now I'm just following a tutorial on YouTube that's teaching me how to make Asteroids, which is why the project is called "Asteroids".
-      <p style="font-size: 20px">Currently I'm able to accelerate and rotate the ship. </p>
-      <p style="font-size: 20px">I'm excited to start working on the ship sprites. Hopefully will be easy to import them into Unity.
+      <h2 id="game-review">Review</h2>
+      <h2>The Typing of the Dead</h2>
+      <p><em>01/07/2024</em></p>
 
-    <h2>Behind The Scenes: HTML</h2>
-    <p><em>01/11/2024</em></p>
+      <img
+        src="https://www.giantbomb.com/a/uploads/original/0/340/370463-totd.jpg"
+        alt="Typing of the Dead"
+      />
 
-    <img src="https://i.imgur.com/sXy89Hd.png" width="50%"
-    height="auto">
-    <p style="font-size: 20px">This is the code I used to make this website.
-      <p style="font-size: 20px">The one you're looking at right now.
+      <p>
+        Maybe you’re a fan of the original games and you’re looking to relive old
+        memories with a new twist. Or maybe, like me, you’re trying to brush up on
+        your typing skills.
+      </p>
 
+      <p>
+        Either way you look at it, <em>The Typing of the Dead</em> is a fast-paced,
+        thrilling adventure back through one of the greatest on-rail shooters to
+        ever hit the horror genre.
+      </p>
 
-    <h2>Positioning GIFs</h2>
-        <p><em>01/11/2024</em></p>
-        <p style="font-size: 20px">  I moved my Kirby Floating Gif so now it's next to the Page Title :D 
-          <p style="font-size: 20px">Lookin' good, Kirby. Hang in there, buddy.
+      <p>
+        It’s a bit jarring at first when you’re thrown into a world of zombies with
+        only your keyboard to protect yourself. But that’s what makes <em>The Typing of the Dead</em> all the
+        more engaging.
+      </p>
 
-    <h2>Monster Hunter GU Save Transfer</h2>
-        <p><em>20/08/2024</em></p>
-        <p style="font-size: 20px">This week I made a return to Monster Hunter, one of my all time favourite franchises. Specifically Monster Hunter Generations Ultimate, a 1080p high resolution remake of the game originally released on the 3DS. Because the eShop closed down in April, I was unable to make use of the Save data transfer tool that was designed specifically to port your save from the 3DS to the Switch. 
-However, I managed to track down a Save Editor online and through a ridiculously laborious process that took me over two days, I managed to get my old save onto the Switch with a little help from my old friend Hex Editor.
+      <p>
+        On a technical level, the game runs very smoothly and the inputs have
+        lightning-fast response time, which makes laying out zombies with your
+        trusty keyboard all the more enjoyable.
+      </p>
 
-    <h2>Game Review</h2>
-<h2>The Typing of the Dead</h2>
-<p><em>01/07/2024</em></p>
+      <p>
+        Typing out words or phrases to dispatch zombies adds an unexpectedly
+        satisfying layer of challenge and skill. The game cleverly integrates its
+        typing mechanics into the familiar on-rails shooting format, requiring
+        quick thinking and accurate typing under pressure.
+      </p>
 
-<img src="https://www.giantbomb.com/a/uploads/original/0/340/370463-totd.jpg" alt="Typing of the Dead">
+      <p>
+        I found that some of the boss fights were quite challenging in the later
+        stages. These encounters require not only typing speed but also strategic
+        thinking, as each boss presents unique patterns and weaknesses.
+      </p>
 
-<p style="font-size: 20px">
-  Maybe you’re a fan of the original games and you’re looking to relive old memories with a new twist. Or maybe, like me, you’re trying to brush up on your typing skills.
-</p>
+      <p>
+        It’s a refreshing twist on traditional boss battles, where victory hinges
+        on how well you can type out commands while dodging attacks.
+      </p>
 
-<p style="font-size: 20px">
-  Either way you look at it, <em>The Typing of the Dead</em> is a fast-paced, thrilling adventure back through one of the greatest on-rail shooters to ever hit the horror genre.
-</p>
-
-<p style="font-size: 20px">
-  It’s a bit jarring at first when you’re thrown into a world of zombies with only your keyboard to protect yourself. But that’s what makes TOTD all the more engaging.
-</p>
-
-<p style="font-size: 20px">
-  On a technical level, the game runs very smoothly and the inputs have lightning-fast response time, which makes laying out zombies with your trusty keyboard all the more enjoyable.
-</p>
-
-<p style="font-size: 20px">
-  Typing out words or phrases to dispatch zombies adds an unexpectedly satisfying layer of challenge and skill. The game cleverly integrates its typing mechanics into the familiar on-rails shooting format, requiring quick thinking and accurate typing under pressure.
-</p>
-
-<p style="font-size: 20px">
-  I found that some of the boss fights were quite challenging in the later stages. These encounters require not only typing speed but also strategic thinking, as each boss presents unique patterns and weaknesses.
-</p>
-
-<p style="font-size: 20px">
-  It’s a refreshing twist on traditional boss battles, where victory hinges on how well you can type out commands while dodging attack
-
-    
-    <h2>Hiking through Japan: Kumano Kodo</h2>
-    <p><em>01/06/2024</em></p>
-    <p style="font-size: 20px">Japan is a land of contrasts, where bustling cities seamlessly blend with serene natural landscapes and ancient traditions coexist with modern innovation. Recently, I had the opportunity to embark on a transformative journey along the Kumano Kodo trail, an ancient pilgrimage route nestled deep in the mystical Kii Mountains of the Kii Peninsula. This adventure not only tested my physical endurance but also enriched my spirit with the profound cultural and spiritual heritage of Japan.
-
-      A Path Through History and Spirituality
+      <h2 id="hiking-through-japan-kumano-kodo">Hiking through Japan: Kumano Kodo</h2>
+      <p><em>01/06/2024</em></p>
+      <p>
       
-      The Kumano Kodo trail is not just a hiking route; it is a path steeped in history and spirituality. For over a thousand years, pilgrims, including emperors and commoners alike, have traversed these sacred paths to reach the three grand shrines known collectively as the Kumano Sanzan: Kumano Hongu Taisha, Kumano Nachi Taisha, and Kumano Hayatama Taisha. Each shrine is nestled in a different part of the Kii Mountains, surrounded by lush forests, pristine rivers, and tranquil waterfalls.
-      
-      My Journey Begins
-      
-      My journey on the Kumano Kodo trail started in the town of Tanabe, where I received my pilgrimage passport, or "Nokyocho," a traditional booklet used to collect unique stamps from each shrine visited along the way. This simple act connected me to centuries of pilgrims who had walked these paths before me, seeking spiritual enlightenment and purification.
-      
-      Nature's Splendor and Serenity
-      
-      As I hiked through dense cedar forests and across moss-covered stone paths, I was struck by the profound serenity and natural beauty that enveloped me. The sounds of chirping birds and babbling brooks provided a soothing soundtrack to my journey, while the scent of cedar and earth grounded me in the present moment. Along the way, I encountered picturesque oji shrines, small temples dedicated to local deities, where I paused to offer prayers and reflect on the significance of my pilgrimage.
-      
-      Encounters with Tradition and Hospitality
-      
-      One of the highlights of my hike was staying in traditional Japanese minshuku (guesthouses) and ryokan (inns) along the trail. These accommodations not only provided much-needed rest but also immersed me in Japanese hospitality and culture. I enjoyed delicious, locally sourced meals, including delicate sashimi and nourishing bowls of udon, prepared with care by my hosts. The warm futon beds and soothing hot spring baths offered a welcome respite after a day of hiking.
-      
-      Spiritual Reflections at Kumano Sanzan
-      
-      Reaching the Kumano Sanzan was a culmination of both physical and spiritual achievement. Each shrine offered a unique atmosphere and a chance for introspection. At Kumano Nachi Taisha, I stood in awe of Japan's tallest waterfall, Nachi no Taki, which cascades dramatically into a serene pool below. At Kumano Hongu Taisha, I marveled at the majestic Oyunohara, a vast sandbar where the shrine's torii gate stands proudly amidst the surrounding mountains.
-      
-      Conclusion: A Transformational Experience
-      
-      Walking the Kumano Kodo trail was more than just a hike; it was a journey of self-discovery and cultural immersion. The tranquil beauty of the Kii Mountains, combined with the rich spiritual history of the Kumano region, left an indelible mark on my soul. As I completed my pilgrimage and received the final stamp in my Nokyocho, I felt a profound sense of accomplishment and gratitude for having experienced Japan's spiritual heart in such a profound way.
-      
-      If you're seeking a journey that combines physical challenge with spiritual enrichment, I highly recommend embarking on the Kumano Kodo trail. Whether you're a seasoned hiker or a cultural enthusiast, this ancient pilgrimage route offers a rare opportunity to connect with Japan's past, present, and natural beauty in a deeply meaningful way.</p>
 
-      <h2>Working with Ableton in <em>The Twilight Zone</em></h2>
+       <h2>Working with Ableton in <em>The Twilight Zone</em></h2>
     <p><em>20/02/2024</em></p>
     <p style="font-size: 20px">In this project I used voice samples from the episode <em>"What You Need"</em> (Season 1
       Episode 12) of The Twlight Zone to make a dance track. <p style="font-size: 20px">It was a very enjoyable process and I had a lot of fun getting to know how to use Ableton. </p>
       <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1484837161&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/casimir-yiontis" title="Caz" target="_blank" style="color: #cccccc; text-decoration: none;">Caz</a> · <a href="https://soundcloud.com/casimir-yiontis/slippery-shoes" title="Slippery Shoes" target="_blank" style="color: #cccccc; text-decoration: none;">Slippery Shoes</a></div>
     
-      <h2>Movie Review</h2>
+      <h2>Review</h2>
     <h2><em>An American Werewolf in London</em></h2>
     <p><em>12/10/2023</em></p>
 <p>
@@ -170,42 +289,34 @@ However, I managed to track down a Save Editor online and through a ridiculously
   
   <p style="font-size: 20px"><em></em>Rating: 4.5/5<em></em><p></p>
   
-  <p style="font-size: 20px"</p>"An American Werewolf in London" is a rare gem that successfully marries horror, comedy, and pathos, offering a cinematic experience that lingers long after the credits roll.</p>
+  <p style="font-size: 20px">"An American Werewolf in London" is a rare gem that successfully marries horror, comedy, and pathos, offering a cinematic experience that lingers long after the credits roll.</p>
       
 
-        <h2>Game Review</h2>
+        <h2 id="elden-ring">Review</h2>
         <h2>Elden Ring</h2>
         <p><em>05/08/2023</em></p>
 
         <p><img src="https://www.gamereactor.eu/media/49/eldenring_3734963.png" alt="The World of Elden Ring"</p>
 
-        <p style="font-size: 20px">"Elden Ring" transports players to the mythical land of the Lands Between, a sprawling open-world setting that exudes both beauty and desolation. From verdant forests to towering mountains and eerie ruins, every corner of this world is meticulously crafted to evoke a sense of wonder and danger. The landscape is teeming with formidable enemies, hidden treasures, and secrets waiting to be unearthed.
+         <p style="font-size: 20px">Looking back over my 200 hours with Elden Ring, it’s hard not smile when I reminisce about the time spent in the vast and haunting world of Elden Ring. If you’re a long-time fan of FromSoftware like I am, you’ll know what I’m talking about. Miyazaki has truly outdone himself in this latest entry of the Souls series.</p>
+<p style="font-size: 20px">To those who have played previous titles such as the Dark Souls games and Bloodborne, Elden Ring will feel like slipping into a pair of well-worn denims. Whilst feeling and handling very much like its predecessors. A style fans know all too well.</p>
+<p style="font-size: 20px">Elden Ring transports players to the mythical land of the Lands Between, a sprawling open-world setting that exudes both beauty and desolation. From verdant forests to towering mountains and eerie ruins, every corner of this world is meticulously crafted to evoke a sense of wonder and danger. The landscape is teeming with formidable enemies, hidden treasures, and secrets waiting to be unearthed.</p>
+<p style="font-size: 20px">True to FromSoftware’s legacy, Elden Ring offers challenging gameplay that rewards perseverance and strategic thinking. Players can create their character, choosing from a variety of classes and abilities that cater to different playstyles.</p>
+<p style="font-size: 20px">Combat is intense and methodical, requiring precise timing, careful observation of enemy patterns, and utilization of a wide array of weapons and magic.
+ 
+<p style="font-size: 20px">The introduction of new mechanics adds fresh layers to gameplay, granting players access to powerful abilities and enhancing their combat prowess. This system encourages exploration and experimentation, as uncovering the mysteries surrounding the Elden Ring is key to unlocking its full potential.</p>
+<p style="font-size: 20px">The ability to jump is a revolutionary mechanic in FromSoft games and one that left players dumbfounded in the original gameplay trailers.</p>
+<p style="font-size: 20px">One of the most striking aspects of Elden Ring is its storytelling, heavily influenced by George R.R. Martin’s touch. The narrative depth and world-building are impressive, with lore intricately woven into the fabric of the game. Each location, character, and item contributes to a larger tapestry of mythology and history. The storytelling is often cryptic yet compelling, inviting players to piece together fragments of the world’s past and present. The atmosphere is hauntingly beautiful, enhanced by a dynamic day-night cycle and weather system that subtly shifts the mood of the environment.</p>
+<p style="font-size: 20px">From serene sunsets to ominous storms, each moment in Elden Ring feels alive and immersive, drawing players deeper into its enigmatic world. The game captures a sense of scale and grandeur that elevates every encounter, making even the smallest discovery feel monumental.</p>
+<p style="font-size: 20px">The rustling leaves, distant howls, and the echo of footsteps in abandoned ruins—create a soundscape that adds layers to the experience, pulling players into the story. This immersive atmosphere is further enriched by the use of symbolism throughout the game, where visual motifs and recurring themes reflect the struggles between light and darkness, hope and despair, enhancing the emotional weight of the narrative and making each player’s journey feel uniquely personal. As players delve deeper into the Lands Between, they are not merely observers of a story; they become integral parts of a living legend, where their choices echo through the intricate web of fate that binds the world together.</p>
+<p style="font-size: 20px">Beyond the individual experience, Elden Ring fosters a vibrant community of players. The shared experiences of triumph and defeat create a sense of camaraderie, as players discuss strategies, lore, and discoveries. The game’s rich lore and intricate mechanics inspire countless theories and discussions, enhancing the overall experience.</p>
+<p style="font-size: 20px">Replayability is another significant aspect of Elden Ring. With various classes, playstyles, and choices impacting the narrative and world, players are encouraged to embark on multiple journeys. Each playthrough offers the opportunity to uncover new secrets and experience the game from different perspectives, ensuring that the adventure remains fresh and engaging.</p>
+<p style="font-size: 20px">Prepare yourself for an epic journey through the Lands Between, where danger and discovery await at every turn. Elden Ring is not just a game; it’s an adventure that will test your skills, ignite your imagination, and leave you craving more. The legacy of FromSoftware continues to shine bright.</p>
 
-          Gameplay: Challenging and Rewarding
-          
-          True to FromSoftware's legacy, "Elden Ring" offers challenging gameplay that rewards perseverance and strategic thinking. Players can create their character, choosing from a variety of classes and abilities that cater to different playstyles. Combat is intense and methodical, requiring precise timing, careful observation of enemy patterns, and utilization of a wide array of weapons and magic.
-          
-          The introduction of the titular Elden Ring mechanic adds a new layer to gameplay, granting players access to powerful abilities and enhancing their combat prowess. This system encourages exploration and experimentation, as uncovering the mysteries surrounding the Elden Ring is key to unlocking its full potential.
-          
-          Storytelling and Atmosphere
-          
-          George R.R. Martin's influence is palpable in "Elden Ring's" narrative depth and world-building. Lore is intricately woven into the fabric of the game, with each location, character, and item contributing to a larger tapestry of mythology and history. The storytelling is often cryptic yet compelling, inviting players to piece together the fragments of the world's past and present.
-          
-          The atmosphere is hauntingly beautiful, enhanced by a dynamic day-night cycle and weather system that subtly shifts the mood of the environment. From serene sunsets to ominous storms, each moment in "Elden Ring" feels alive and immersive, drawing players deeper into its enigmatic world.
-          
-          Visuals and Sound Design
-          
-          Visually, "Elden Ring" is stunning, showcasing FromSoftware's mastery in environmental design and art direction. The landscapes are breathtaking, featuring intricate details and atmospheric lighting that bring the world to life. Character and enemy designs are equally impressive, with grotesque monsters and formidable bosses that are as terrifying as they are awe-inspiring.
-          
-          The sound design complements the visuals perfectly, with a haunting soundtrack that underscores the game's themes of heroism, despair, and the relentless passage of time. The sound effects are visceral and impactful, adding weight to every sword swing, spell cast, and creature roar.
-          
-          Conclusion: A Triumph of Exploration and Challenge
-          
-          "Elden Ring" is a triumph of game design, seamlessly blending challenging gameplay, deep storytelling, and breathtaking visuals into a cohesive and unforgettable experience. Whether you're a fan of FromSoftware's previous titles or a newcomer to the genre, "Elden Ring" offers an expansive world ripe for exploration, filled with mysteries waiting to be unraveled and battles waiting to be won.
-          
-          Prepare yourself for an epic journey through the Lands Between, where danger and discovery await at every turn. "Elden Ring" is not just a game; it's an adventure that will test your skills, ignite your imagination, and leave you craving more.</p>
+<p style="font-size: 20px">Written by Casimir Yiontis</p>
 
-          <h2>Game Review</h2>
+
+          <h2 id="kirby's-adventure-3ds">Review</h2>
         <h2>Kirby's Adventure 3DS</h2>
         <p><em>14/05/2023</em></p>
 
@@ -275,48 +386,6 @@ However, I managed to track down a Save Editor online and through a ridiculously
             <p style="font-size: 20px"> He rushes out to see if he can catch the old man and spots him outside, standing next to a darkly coloured bus that glows in the moonlight. The old man pauses for a moment before getting in, turns around with a smile and winks at Reggie before climbing into the driver's seat and taking off towards the moon.
           The next day Reggie is back driving the bus, still in disbelief from what he saw the night before. He looks down at his bottle of bourbon in the driver’s compartment before continuing on his route.<p></p>
           </p>
-        
-        
-        
-
-    
-
-          <h2>James and the Hardware store </h2>
-
-          <p style="font-size: 20px">
-
-James put his key in the ignition and stepped his foot down on the accelerator. It was only four o’clock, the shop didn’t close until five. He still had plenty of time. James had been building a coffee table for his girlfriend for her birthday. He’d spent all morning in the back yard hammering away. The only problem was that now he had run out of screws. He was just a few shy. But her birthday was very fast approaching. It was tomorrow in fact. He should’ve headed down to the hardware store this morning but he was busy mowing the lawn, now he was racing through the traffic on the freeway to get to the only shop in town before it closed. 
-He arrived with only fifteen minutes to spare. This wasn’t just a regular hardware store. It’s one of those shops that’s got everything. An emporium you might say. One of those shops that you can go in and ask for a door stop, or a pack of cards, or a fancy dress wig. Whatever you need, they’ve got it. James stepped through the automatic doors. He had planned to ask the shopkeeper where the screws were right away, but he was busy serving another customer. There was a line of about ten people, all queued up with their items and shoving out the door trying to get home. 
-‘Just hurry up and get your screws and get out’ James thought.
-He stood gazing vacuously at the dozens of aisles in front of him. He thought it would be wise not to get the shopkeepers attention, in case he told him there wasn’t enough time left and asked him to get out. So, he crept down one of the aisles and started looking around. He took a left, then a right, then another left. The place was a labyrinth. It was packed full of all sorts. Surrounding him was a cacophony of sunglass racks, birthday party supplies, imported goods and knick-knacks that he’d only ever noticed peripherally but never taken the time to acknowledge. 
-‘Is there anybody back there? We’re closing!’ He heard the shopkeeper shout.
-James was silent. He knew if he told the shopkeeper he was back here he might be asked to leave. He hadn’t come all this way and gone through all this effort to back out now. Besides it was his girlfriend’s birthday tomorrow and there was no way he could face her without something to show for it. No, he was leaving with a pack of screws… 
-…One way or another.
-
-
-Ten minutes had passed. James had got so turned around in the clutter of objects in the shop, he had completely lost track of time. An acute ache in his head was beginning to make itself known, a pressure like he had been wearing a cap that was far too tight. He hadn’t even come close to finding the screws and now he would have to go and face the shopkeeper, who would certainly not be happy to see him. Hopefully he hadn’t locked the till yet. James got to the front of the shop. There was nobody there. 
-
-
-James stood pathetically at the counter for a few moments.
-‘Hello?’ he called out to an empty room.
-The distant cry of church bells echoed through the building.
-‘Hello?’ he repeated with an added note of worry in his voice.
-Had they locked the shop with him in it? Impossible, he thought. He tried to see if he could spot an alarm to tell if the shopkeeper had switched them on, but he couldn’t see any. Then he walked up to sliding doors and waved his hand in front of the sensor. They wouldn’t open either. He peered out through the glass at the pitch-black sky. He thought he could see a car pulling out onto the freeway somewhere in the distance.
-‘Christ, it had got dark quickly’ he thought.
-Then a sickening feeling came over him as he grasped what he was looking at. He wasn’t staring at the night sky over a dimly lit car park. He was staring at the inside of the store’s shutters. The pain in his head came back again, in full force this time; a sharp stabbing pain. He thought about calling the police. Or maybe his girlfriend. No, he couldn’t do that, he would never hear the end of it. It would totally ruin her birthday and then he would be in her bad graces for a very long time. It would take years of apologies and breakfasts in bed to crawl his way back from something like that.
-‘Maybe there’s a spare key somewhere behind the front desk’ he exclaimed out loud.
-He felt the old timber walls closing in around him. He walked up beside the register and looked around to see if there were any security cameras. There was one right above the counter, and he mimed at it as if he was unlocking a door to signal that he was just looking for a key, and not trying to rob the place. He began rummaging through drawers and turning the place upside down. There was no key to be found anywhere. Nothing in any of the cabinets and nothing in the drawers. 
-Then he spotted something: a small bin box with a lock on the side. He reckoned there would be a good chance there would be a spare key in there or something that might help him get out of here. He just had a feeling; James often proved quite the psychic in high-pressure situations like this. He tried to jimmy it open with his pocket knife but no luck. And then… Yes! It was working, it was coming loose! He thought he saw something shimmering inside. There was enough space for his fingers to get in now. He wedged himself between the counter and the back wall, and squatted down with his knees above his head. He placed his foot against the desk, and kicked with all his strength. The drawer flew open and James was sent flying backwards with a terrible thud against the wall.
-There were spots of light against a grey static-y background. Sunshine was pouring in through the curtains of the hospital window as James lay in the stretcher, his head wrapped in bandages. The pain in his head was no longer there and he felt a strange warmth surrounding him. His eyes opened slowly and drifted up towards his girlfriend, who was standing next to the bed looking down at him with a scowl on her face, her arms folded.
-‘Happy birthday baby’ he chuckled.
-
-
-
-            
-            
-            </p>
-</div>
-</font>        
-</body>
-  </head>
+    </main>
+  </body>
 </html>

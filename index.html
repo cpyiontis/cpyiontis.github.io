@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -13,7 +13,6 @@
         padding: 0;
       }
 
-      /* Sidebar styles */
       .sidebar {
         position: fixed;
         left: 0;
@@ -26,20 +25,37 @@
         overflow-y: auto;
       }
 
-      .sidebar a {
+      .sidebar a,
+      .dropdown-btn {
         display: block;
         color: white;
         text-decoration: none;
         margin: 15px 0;
         font-weight: bold;
         font-size: 18px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+        text-align: left;
       }
 
-      .sidebar a:hover {
+      .sidebar a:hover,
+      .dropdown-btn:hover {
         color: pink;
       }
 
-      /* Main content */
+      .dropdown-container {
+        display: none;
+        padding-left: 15px;
+      }
+
+      .dropdown-container a {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 8px 0;
+      }
+
       main.content {
         margin-left: 240px;
         padding: 20px 40px;
@@ -51,10 +67,9 @@
         text-align: center;
         margin-top: 30px;
         margin-bottom: 40px;
-        margin-left: 70px; /* nudged right */
+        margin-left: 70px;
       }
 
-      /* Nudge the first two paragraphs below h1 */
       .content > p:first-of-type,
       .content > p:nth-of-type(2) {
         margin-left: 70px;
@@ -78,57 +93,101 @@
         margin: 10px 0;
       }
 
-      /* Positioning the floating GIFs */
-      .floating-gif {
-        position: absolute;
-        height: auto;
+      .blog-button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
 
-      .kirby {
-        left: 500px;
-        top: 12px;
-        width: 10%;
-      }
-
-      .pizza {
-        left: 1200px;
-        top: 70px;
-        width: 10%;
+      .blog-star {
+        width: 50px;
+        height: 50px;
+        image-rendering: pixelated;
       }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.getElementsByClassName("dropdown-btn");
+        for (let i = 0; i < dropdowns.length; i++) {
+          dropdowns[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            const dropdownContent = this.nextElementSibling;
+            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+          });
+        }
+      });
+    </script>
   </head>
   <body>
-    <!-- Floating GIFs -->
-    <img
-      src="https://media.tenor.com/SRDuFks8igEAAAAi/kirby.gif"
-      alt="Kirby floating"
-      class="floating-gif kirby"
-   
-    />
-    <img
-      src="https://media.tenor.com/LtaH0AouMOsAAAAi/pizza.gif"
-      alt="Spinning Pizza"
-      class="floating-gif pizza"
-    />
+    <img src="https://i.imgur.com/d1b0qhD.gif" width="20%" height="auto" style="margin-left: 50%; margin-top: 5%;">
 
-    <!-- Sidebar -->
     <nav class="sidebar">
-      <a href="#summer-games-fest-2025">Summer Games Fest 2025</a>
-      <a href="#modding-8bitdo-arcade">Modding My 8BitDo Arcade Stick</a>
-      <a href="#nintendo-switch-2-announced">Nintendo Switch 2 Announcement</a>
-      <a href="#making-a-video-game-day-1">Making a Video Game</a>
-      <a href="#behind-the-scenes-html">Behind The Scenes: HTML</a>
-      <a href="#positioning-gifs">Positioning GIFs</a>
-      <a href="#monster-hunter-gu-save-transfer">Monster Hunter GU Save Transfer</a>
-      <a href="#game-review">The Typing of the Dead</a>
-      <a href="#hiking-through-japan-kumano-kodo">Hiking through Japan: Kumano Kodo</a>
-      <a href="#elden-ring">Elden Ring</a>
-      <a href="#kirby's-adventure-3ds">Kirby's Adventure 3DS</a>
+      <button class="dropdown-btn blog-button">
+        <img src="https://i.imgur.com/EyPw5lV.gif" class="blog-star" alt="Reviews GIF" />
+        Reviews
+      </button>
+      <div class="dropdown-container">
+        <a href="#game-review">The Typing of the Dead</a>
+        <a href="#elden-ring">Elden Ring</a>
+        <a href="#kirby's-adventure-3ds">Kirby's Adventure 3DS</a>
+        <a href="#an-american-werewolf">An American Werewolf in London</a>
+      </div>
+
+      <button class="dropdown-btn blog-button">
+        <img src="https://i.imgur.com/hvy9MIa.gif" class="blog-star" alt="Articles GIF" />
+        Articles
+      </button>
+      <div class="dropdown-container">
+        <a href="#summer-games-fest-2025">Summer Game Fest 2025</a>
+        <a href="#nintendo-switch-2-announced">Nintendo Switch 2 Announcement</a>
+      </div>
+
+      <button class="dropdown-btn blog-button">
+        <img src="https://i.imgur.com/uzGY1T3.gif" class="blog-star" alt="Guides GIF" />
+        Guides
+      </button>
+      <div class="dropdown-container">
+        <a href="#elden-ring-margit-guide">Beating Margit (Elden Ring)</a>
+      </div>
+
+      <button class="dropdown-btn blog-button">
+        <img src="https://i.imgur.com/9Xdw6Ye.gif" class="blog-star" alt="Projects GIF" />
+        Projects
+      </button>
+      <div class="dropdown-container">
+        <a href="#modding-8bitdo-arcade">Modding My 8BitDo Arcade Stick</a>
+        <a href="#making-a-video-game-day-1">Making a Video Game</a>
+        <a href="#behind-the-scenes-html">Behind The Scenes: HTML</a>
+        <a href="#positioning-gifs">Positioning GIFs</a>
+        <a href="#monster-hunter-gu-save-transfer">Monster Hunter GU Save Transfer</a>
+      </div>
+
+      <button class="dropdown-btn blog-button">
+        <img src="https://i.imgur.com/LcrIExo.gif" class="blog-star" alt="Green Star GIF" />
+        Blog
+      </button>
+      <div class="dropdown-container">
+        <a href="#hiking-through-japan-kumano-kodo">Hiking through Japan</a>
+        <a href="#the-bus-driver">The Bus Driver</a>
+        <a href="#working-with-ableton">Working with Ableton</a>
+      </div>
     </nav>
+
+    <main class="content">
+      <!-- Your content sections go here -->
+    </main>
+  </body>
+</html>
+
+
+
+      <!-- Leave the rest of your content (paragraphs, images, etc.) unchanged -->
+    </main>
+  </body>
+</html>
 
     <!-- Main content -->
     <main class="content">
-      <h1>Caz.com</h1>
 
       <p>
         This is a page I designed using HTML. It acts as a blog, review site and
@@ -139,18 +198,46 @@
         <a href="https://www.facebook.com/casimiryiontis/">Facebook</a>,
         <a href="https://www.instagram.com/cpyiontis/">Instagram</a>
       </p>
+<br>
+<br>
+      
 
-<h2 id="summer-games-fest-2025">Summer Games Fest 2025</h2>
+<h2 id="summer-games-fest-2025">Summer Game Fest 2025</h2>
       <p><em>07/06/2025</em></p>
-      <img src="https://cdn.mos.cms.futurecdn.net/pAgh4TNRRiPZKoPYGrHptS-970-80.jpg" alt="Line Void progress" />
+      <img src="https://cdn.mos.cms.futurecdn.net/pAgh4TNRRiPZKoPYGrHptS-970-80.jpg" width="50%"
+        height="auto">
+
+<p>Summer Game Fest 2025 just aired with an exciting flurry of game announcements. Here are some of the games that we're most excited for: </p>
+
+        <p><strong>Sonic Racing Cross Worlds</strong><br>
+Sonic returns to the track with a chaotic new twist. <em>Cross Worlds</em> merges high-speed racing with multiverse mechanics, throwing characters from different Sonic timelines into neon-soaked circuits that warp mid-race. With a mix of classic drift-heavy kart racing and dimension-bending hazards, it’s one of the most visually ambitious Sonic spin-offs to date.</p>
+
+<p><strong>Lego Voyagers</strong><br>
+A fresh IP from the Lego games team, <em>Lego Voyagers</em> trades traditional brick-breaking for galaxy-spanning exploration. It’s an open-world sci-fi adventure where players build and pilot customizable starships, recruit quirky crew members, and visit procedurally-generated planets. The tone is lighthearted, but the scope is surprisingly vast.</p>
+
+<p><strong>Mina the Hollower</strong><br>
+Yacht Club’s retro love letter to Game Boy Color action titles is finally nearing release. <em>Mina the Hollower</em> blends gothic horror with fast-paced top-down combat, featuring tight dungeons, whip-based action, and a moody chiptune soundtrack. It looks and plays like a lost classic, with all the polish of modern design.</p>
+
+<p><strong>Stranger Than Heaven</strong><br>
+This mysterious new narrative game from Annapurna had one of the most talked-about trailers at SGF. Blending surreal dreamscapes, romantic drama, and light puzzle mechanics, <em>Stranger Than Heaven</em> looks like a spiritual successor to <em>What Remains of Edith Finch</em>—but weirder, more experimental, and unapologetically emotional.</p>
+
+<p><strong>Resident Evil 9</strong><br>
+Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusion to the Winters saga. Set in a cursed island off the coast of the Pacific Northwest, the game leans into psychological horror, with new enemies inspired by urban legends and folklore. The gameplay looks slower and more atmospheric than <em>RE Village</em>, but no less terrifying.</p>
+
+<p>Written by Casmir Yiontis</p>
 
 <h2 id="modding-8bitdo-arcade">Modding My 8BitDo Arcade Stick</h2>
       <p><em>12/05/2025</em></p>
-      <img src="https://i.imgur.com/PjYn79f.jpeg" alt="Line Void progress" />
+      <img src="https://i.imgur.com/PjYn79f.jpeg" width="50%"
+        height="auto">
+
+        <p>I've added some different-coloured Sanwa buttons to my 8BitDo Xbox Arcade Stick!! I picked these up the last time I as in Japan and they look and feel great. Definitely an improvement over the original buttons.</p>
+        <p>The replacement was fairly simple and just involved unscrewing the base plate and unplugging the old buttons. I took me longer than I expected to find the correct size screwdriver though haha.</p>
 
 <h2 id="nintendo-switch-2-announced">Nintendo Switch 2 Announced</h2>
       <p><em>03/04/2025</em></p>
-      <img src="https://cdn.mos.cms.futurecdn.net/7BeJaCY6Jzprdd7cdinRd-970-80.jpg" alt="Line Void progress" />
+      <img src="https://cdn.mos.cms.futurecdn.net/7BeJaCY6Jzprdd7cdinRd-970-80.jpg" width="50%"
+        height="auto">
 
       <p style="font-size: 20px">Nintendo has officially announced the Nintendo Switch 2, set to launch on June 5, 2025, with a starting price of $449.99 AUD. This next-generation hybrid console builds upon the success of its predecessor, introducing significant hardware upgrades and new features designed to enhance the gaming experience.</p>
 <p style="font-size: 20px">The Switch 2 boasts a 7.9-inch 1080p LCD touchscreen with HDR10 support and a 120Hz refresh rate, offering sharper visuals and smoother gameplay. Powered by a custom Nvidia Tegra processor, the console supports 4K resolution when docked, providing a substantial performance boost over the original Switch.</p>
@@ -299,7 +386,7 @@
         <p><img src="https://www.gamereactor.eu/media/49/eldenring_3734963.png" alt="The World of Elden Ring"</p>
 
          <p style="font-size: 20px">Looking back over my 200 hours with Elden Ring, it’s hard not smile when I reminisce about the time spent in the vast and haunting world of Elden Ring. If you’re a long-time fan of FromSoftware like I am, you’ll know what I’m talking about. Miyazaki has truly outdone himself in this latest entry of the Souls series.</p>
-<p style="font-size: 20px">To those who have played previous titles such as the Dark Souls games and Bloodborne, Elden Ring will feel like slipping into a pair of well-worn denims. Whilst feeling and handling very much like its predecessors. A style fans know all too well.</p>
+<p style="font-size: 20px">To those who have played previous titles such as the Dark Souls games and Bloodborne, Elden Ring will feel like slipping into a pair of well-worn denims, feeling and handling very much like its predecessors; a style fans know all too well.</p>
 <p style="font-size: 20px">Elden Ring transports players to the mythical land of the Lands Between, a sprawling open-world setting that exudes both beauty and desolation. From verdant forests to towering mountains and eerie ruins, every corner of this world is meticulously crafted to evoke a sense of wonder and danger. The landscape is teeming with formidable enemies, hidden treasures, and secrets waiting to be unearthed.</p>
 <p style="font-size: 20px">True to FromSoftware’s legacy, Elden Ring offers challenging gameplay that rewards perseverance and strategic thinking. Players can create their character, choosing from a variety of classes and abilities that cater to different playstyles.</p>
 <p style="font-size: 20px">Combat is intense and methodical, requiring precise timing, careful observation of enemy patterns, and utilization of a wide array of weapons and magic.
@@ -324,22 +411,7 @@
         width="40%"
         height="auto">
 
-        <p style="font-size: 20px">Kirby's Adventure for the Nintendo 3DS brings everyone's favorite pink puffball back in a charming and delightful adventure that pays homage to its classic roots while introducing new features for modern players to enjoy. Originally released on the NES in 1993, this beloved platformer has been lovingly remastered and enhanced for the portable 3DS console, offering a nostalgic trip for long-time fans and a perfect introduction for newcomers to Kirby's whimsical world.
-          
-          At its core, Kirby's Adventure 3DS retains the timeless appeal of classic platformers. Players control Kirby as he navigates through colorful levels filled with enemies, obstacles, and secrets. Kirby's iconic ability to inhale enemies and copy their powers remains a central gameplay mechanic, allowing for a wide variety of playstyles and strategies. Whether you prefer blasting foes with fireballs, freezing them with ice breath, or wielding a sword with precision, Kirby's diverse abilities ensure that gameplay stays fresh and engaging.
-          
-          The transition to the 3DS platform brings "Kirby's Adventure" to life with enhanced visuals and 3D effects that add depth to the vibrant environments. The colorful landscapes and character designs benefit from the 3DS's graphical capabilities, breathing new life into familiar locations such as Dream Land and beyond. The 3D effects, when used, provide a subtle layer of immersion without sacrificing the classic 2D platforming experience that fans have come to love.
-          
-          In addition to the faithful recreation of the original game, "Kirby's Adventure 3DS" introduces new features and mini-games that expand upon the core gameplay. Players can unlock challenges and bonus stages that offer rewards and additional content, encouraging exploration and replayability. These mini-games range from time trials to puzzle-solving challenges, providing a welcome diversion from the main quest while still maintaining the whimsical charm of the Kirby universe.
-          
-          The soundtrack of Kirby's Adventure 3DS remains as delightful as ever, featuring catchy tunes and memorable melodies that complement the gameplay experience. From upbeat stage themes to boss battle anthems, the music enhances the nostalgic feel of the game while setting the tone for Kirby's epic adventure. The presentation is polished and intuitive, with controls that are responsive and easy to grasp, ensuring that players of all ages can enjoy the game without frustration.
-          
-          Kirby's Adventure 3DS is a delightful addition to the Nintendo 3DS library, capturing the essence of the original while introducing new elements that enhance the overall experience. Whether you're a long-time fan of Kirby or discovering the series for the first time, this game offers hours of platforming fun, charming visuals, and infectious gameplay that will keep you coming back for more. With its blend of classic mechanics and modern enhancements, "Kirby's Adventure 3DS" proves once again why Kirby remains one of Nintendo's most beloved characters.
-          
-          <p style="font-size: 20px">Rating: 4/5
-          
-          <p style="font-size: 20px">Kirby's Adventure on the 3DS delivers a nostalgic joyride through Dream Land with vibrant visuals, engaging gameplay, and a soundtrack that will leave you humming long after you've powered down your 3DS. Don't miss out on this charming platformer that continues to captivate players of all ages with its timeless appeal.</p>
-
+      
         
 
         <h2><strong>The Bus Driver</strong></h2>

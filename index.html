@@ -191,13 +191,29 @@
     <!-- Main content -->
     <main class="content">
 
-      <p> 
-  This is a page I designed using HTML. It acts as a blog, review site and
-  general mish-mash of things I'm working on.
-</p>
-<p>
-  I hope you like it!
-</p>
+    import TextType from './TextType';
+
+export default function IntroSection() {
+  return (
+    <div>
+      <TextType
+        as="p"
+        text={[
+          "This is a page I designed using HTML. It acts as a blog, review site and general mish-mash of things I'm working on.",
+          "I hope you like it!"
+        ]}
+        typingSpeed={50}
+        deletingSpeed={30}
+        pauseDuration={2000}
+        loop={false}
+        showCursor={true}
+        textColors={['#ffffff']}
+        className="intro-text"
+      />
+    </div>
+  );
+}
+
       <p style="text-align: center; margin-left: 50px;">
   You can check out my socials here:
   <a href="https://www.facebook.com/casimiryiontis/">Facebook</a>,

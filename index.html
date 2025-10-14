@@ -1,377 +1,377 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="color-scheme" content="dark light" />
-    <title>Caz.com</title>
-    <style>
+!DOCTYPE html 
+html lang=en
+  head
+    meta charset=utf-8 
+    meta name=color-scheme content=dark light 
+    titleCaz.comtitle
+    style
       body {
-        background-color: #222;
-        color: white;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+        background-color #222;
+        color white;
+        font-family Arial, sans-serif;
+        margin 0;
+        padding 0;
       }
 
       .sidebar {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 220px;
-        height: 100vh;
-        background-color: #111;
-        padding: 20px;
-        box-sizing: border-box;
-        overflow-y: auto;
+        position fixed;
+        left 0;
+        top 0;
+        width 220px;
+        height 100vh;
+        background-color #111;
+        padding 20px;
+        box-sizing border-box;
+        overflow-y auto;
       }
 
       .sidebar a,
       .dropdown-btn {
-        display: block;
-        color: white;
-        text-decoration: none;
-        margin: 15px 0;
-        font-weight: bold;
-        font-size: 18px;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 0;
-        text-align: left;
+        display block;
+        color white;
+        text-decoration none;
+        margin 15px 0;
+        font-weight bold;
+        font-size 18px;
+        cursor pointer;
+        background none;
+        border none;
+        padding 0;
+        text-align left;
       }
 
-      .sidebar a:hover,
-      .dropdown-btn:hover {
-        color: pink;
+      .sidebar ahover,
+      .dropdown-btnhover {
+        color pink;
       }
 
       .dropdown-container {
-        display: none;
-        padding-left: 15px;
+        display none;
+        padding-left 15px;
       }
 
       .dropdown-container a {
-        font-size: 16px;
-        font-weight: normal;
-        margin: 8px 0;
+        font-size 16px;
+        font-weight normal;
+        margin 8px 0;
       }
 
       main.content {
-        margin-left: 240px;
-        padding: 20px 40px;
+        margin-left 240px;
+        padding 20px 40px;
       }
 
       h1 {
-        color: pink;
-        font-size: 75px;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 40px;
-        margin-left: 70px;
+        color pink;
+        font-size 75px;
+        text-align center;
+        margin-top 30px;
+        margin-bottom 40px;
+        margin-left 70px;
       }
 
-      .intro-text p {
-        margin-left: 70px;
-        text-align: center;
-        font-size: 19px;
-        font-family: monospace;
+      .content  pfirst-of-type,
+      .content  pnth-of-type(2) {
+        margin-left 70px;
+        text-align center;
+        font-size 19px;
       }
 
-      .text-type__cursor {
-        display: inline-block;
-        opacity: 1;
-        animation: blink 1s infinite;
-      }
-
-      @keyframes blink {
-        0%, 50%, 100% { opacity: 1; }
-        25%, 75% { opacity: 0; }
+      h2 {
+        color #f0a;
       }
 
       p {
-        font-size: 20px;
-        line-height: 1.5;
+        font-size 20px;
+        line-height 1.5;
       }
 
       img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 10px 0;
+        max-width 100%;
+        height auto;
+        display block;
+        margin 10px 0;
       }
 
       .blog-button {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        display flex;
+        align-items center;
+        gap 10px;
       }
 
       .blog-star {
-        width: 50px;
-        height: 50px;
-        image-rendering: pixelated;
+        width 50px;
+        height 50px;
+        image-rendering pixelated;
       }
-    </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const dropdowns = document.getElementsByClassName("dropdown-btn");
-        for (let i = 0; i < dropdowns.length; i++) {
-          dropdowns[i].addEventListener("click", function () {
-            this.classList.toggle("active");
+    style
+    script
+      document.addEventListener(DOMContentLoaded, function () {
+        const dropdowns = document.getElementsByClassName(dropdown-btn);
+        for (let i = 0; i  dropdowns.length; i++) {
+          dropdowns[i].addEventListener(click, function () {
+            this.classList.toggle(active);
             const dropdownContent = this.nextElementSibling;
-            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+            dropdownContent.style.display = dropdownContent.style.display === block  none  block;
           });
         }
       });
-    </script>
-  </head>
-  <body>
-    <img src="https://i.imgur.com/d1b0qhD.gif" width="20%" height="auto" style="margin-left: 50%; margin-top: 5%;" />
+    script
+  head
+  body
+    img src=httpsi.imgur.comd1b0qhD.gif width=20% height=auto style=margin-left 50%; margin-top 5%;
 
-    <nav class="sidebar">
-      <!-- Sidebar buttons unchanged -->
-    </nav>
+    nav class=sidebar
+      button class=dropdown-btn blog-button
+        img src=httpsi.imgur.comEyPw5lV.gif class=blog-star alt=Reviews GIF 
+        Reviews
+      button
+      div class=dropdown-container
+        a href=#nightreign-reviewElden Ring Nightreigna
+        a href=#game-reviewThe Typing of the Deada
+        a href=#elden-ringElden Ringa
+        a href=#kirby's-adventure-3dsKirby's Adventure 3DSa
+        a href=#an-american-werewolfAn American Werewolf in Londona
+      div
 
-    <main class="content">
-      <!-- Typing animation for your two sentences -->
-      <div id="root" class="intro-text"></div>
+      button class=dropdown-btn blog-button
+        img src=httpsi.imgur.comhvy9MIa.gif class=blog-star alt=Articles GIF 
+        Articles
+      button
+      div class=dropdown-container
+        a href=#cydusCalling All Playersa
+        a href=#summer-games-fest-2025Summer Game Fest 2025a
+        a href=#nintendo-switch-2-announcedNintendo Switch 2 Announcementa
+      div
 
-      <!-- React + ReactDOM CDN -->
-      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+      button class=dropdown-btn blog-button
+        img src=httpsi.imgur.comuzGY1T3.gif class=blog-star alt=Guides GIF 
+        Guides
+      button
+      div class=dropdown-container
+        a href=#elden-ring-margit-guideBeating Margit (Elden Ring)a
+      div
 
-      <script type="text/javascript">
-        const { useState, useEffect, createElement } = React;
+      button class=dropdown-btn blog-button
+        img src=httpsi.imgur.com9Xdw6Ye.gif class=blog-star alt=Projects GIF 
+        Projects
+      button
+      div class=dropdown-container
+        a href=#modding-8bitdo-arcadeModding My 8BitDo Arcade Sticka
+        a href=#making-a-video-game-day-1Making a Video Gamea
+        a href=#behind-the-scenes-htmlBehind The Scenes HTMLa
+        a href=#positioning-gifsPositioning GIFs in HTMLa
+        a href=#monster-hunter-gu-save-transferMonster Hunter GU Save Transfera
+        a href=#working-with-abletonMaking Music in emThe Twilight Zoneema
+      div
 
-        function TextType({ text, typingSpeed = 50 }) {
-          const [lines, setLines] = useState(['']);
-          const [currentLineIndex, setCurrentLineIndex] = useState(0);
+      button class=dropdown-btn blog-button
+        img src=httpsi.imgur.comLcrIExo.gif class=blog-star alt=Green Star GIF 
+        Blog
+      button
+      div class=dropdown-container
+        a href=#hiking-through-japan-kumano-kodoHiking through Japana
+        a href=#the-bus-driverThe Bus Drivera
+      div
+    nav
 
-          useEffect(() => {
-            let timeout;
-            const currentText = text[currentLineIndex];
-            let charIndex = 0;
-
-            const typeChar = () => {
-              if (charIndex < currentText.length) {
-                setLines(prev => {
-                  const newLines = [...prev];
-                  newLines[currentLineIndex] = (newLines[currentLineIndex] || '') + currentText[charIndex];
-                  return newLines;
-                });
-                charIndex++;
-                timeout = setTimeout(typeChar, typingSpeed);
-              } else if (currentLineIndex < text.length - 1) {
-                setLines(prev => [...prev, '']); // add next line
-                setCurrentLineIndex(prev => prev + 1);
-              }
-            };
-
-            typeChar();
-            return () => clearTimeout(timeout);
-          }, [currentLineIndex, text, typingSpeed]);
-
-          return createElement(
-            'div',
-            null,
-            lines.map((line, i) =>
-              createElement('p', { key: i }, line, i === currentLineIndex && createElement('span', { className: 'text-type__cursor' }, '|'))
-            )
-          );
-        }
-
-        function App() {
-          return createElement(TextType, {
-            text: [
-              "This is a page I designed using HTML. It acts as a blog, review site and general mish-mash of things I'm working on.",
-              "I hope you like it!"
-            ],
-            typingSpeed: 50
-          });
-        }
-
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(createElement(App));
-      </script>
-    </main>
-  </body>
-</html>
+    main class=content
+      !-- Your content sections go here --
+    main
+  body
+html
 
 
-      <p style="text-align: center; margin-left: 50px;">
-  You can check out my socials here:
-  <a href="https://www.facebook.com/casimiryiontis/">Facebook</a>,
-  <a href="https://www.instagram.com/cpyiontis/">Instagram</a>,
-  <a href="https://x.com/cyizax_/">X</a>
-</p>
-<br>
-<br>
-      <h2 id="nightreign-review">Review</h2>
-      <h2>Elden Ring: Nightreign</h2> 
-<h2 style="color: #aaa; font-family: Arial, sans-serif; font-weight: normal; font-size: 20px; margin-top: 10px; text-align: left;">
+
+      !-- Leave the rest of your content (paragraphs, images, etc.) unchanged --
+    main
+  body
+html
+
+    !-- Main content --
+    main class=content
+
+      p 
+  This is a page I designed using HTML. It acts as a blog, review site and
+  general mish-mash of things I'm working on.
+p
+p
+  I hope you like it!
+p
+      p style=text-align center; margin-left 50px;
+  You can check out my socials here
+  a href=httpswww.facebook.comcasimiryiontisFacebooka,
+  a href=httpswww.instagram.comcpyiontisInstagrama,
+  a href=httpsx.comcyizax_Xa
+p
+br
+br
+      h2 id=nightreign-reviewReviewh2
+      h2Elden Ring Nightreignh2 
+h2 style=color #aaa; font-family Arial, sans-serif; font-weight normal; font-size 20px; margin-top 10px; text-align left;
 It’s like Elden Ring, but purplier.
-</h2>
-<p><em>21/09/2025</em></p>
-<img src="https://i.imgur.com/8Pu6Hu1.jpeg" width="50%" height="auto">
+h2
+pem21092025emp
+img src=httpsi.imgur.com8Pu6Hu1.jpeg width=50% height=auto
 
-<p>FromSoftware has always walked the tightrope between punishing difficulty and transcendent joy. With <em>Elden Ring: Nightreign</em>, they’ve turned up the speed, and invited squads of three to tango in the dark. The result is a bold experiment: familiar Dark Souls combat and stylistic trappings, but compressed into a roguelike multiplayer format that rarely gives you a moment to breathe. It’s thrilling, occasionally frustrating, sometimes dazzling — and it works, for the most part.</p>
+pFromSoftware has always walked the tightrope between punishing difficulty and transcendent joy. With emElden Ring Nightreignem, they’ve turned up the speed, and invited squads of three to tango in the dark. The result is a bold experiment familiar Dark Souls combat and stylistic trappings, but compressed into a roguelike multiplayer format that rarely gives you a moment to breathe. It’s thrilling, occasionally frustrating, sometimes dazzling — and it works, for the most part.p
 
-<p><em>Nightreign</em> is not a full sequel or traditional DLC. It’s more of a spin-off title. It exists in a parallel reality of the Lands Between — Limveld — that shares many visuals, monsters, and ideas with <em>Elden Ring</em>. You play as Nightfarers, preset heroes (six at first, expanding to eight), each with unique kits rather than building from scratch. Exploration is dialed back; instead, the focus is on fast, tactical decision-making, loot, and surviving three in-game days before facing off with the final boss — The Nightlord.</p>
+pemNightreignem is not a full sequel or traditional DLC. It’s more of a spin-off title. It exists in a parallel reality of the Lands Between — Limveld — that shares many visuals, monsters, and ideas with emElden Ringem. You play as Nightfarers, preset heroes (six at first, expanding to eight), each with unique kits rather than building from scratch. Exploration is dialed back; instead, the focus is on fast, tactical decision-making, loot, and surviving three in-game days before facing off with the final boss — The Nightlord.p
 
-<p>One of <em>Nightreign’s</em> biggest departures from classic Dark Souls pacing is its urgency. Movement and combat feels familiar — you still dodge, roll, and manage stamina — but there’s a constant fear that it could all be over at any moment. If you like methodical exploration and leisurely inventory management, this is the opposite of <em>Elden Ring</em>.</p>
+pOne of emNightreign’sem biggest departures from classic Dark Souls pacing is its urgency. Movement and combat feels familiar — you still dodge, roll, and manage stamina — but there’s a constant fear that it could all be over at any moment. If you like methodical exploration and leisurely inventory management, this is the opposite of emElden Ringem.p
 
-<p>That said, it’s still an interesting game. There’s enough new content to warrant the price tag, and some old bosses have been given a fresh new twist. Repetition does creep in after several runs, since there’s only one main map and limited mini-bosses and castles.</p>
+pThat said, it’s still an interesting game. There’s enough new content to warrant the price tag, and some old bosses have been given a fresh new twist. Repetition does creep in after several runs, since there’s only one main map and limited mini-bosses and castles.p
 
-<p>Meta-progression comes through Relics and permanent upgrades unlocked between runs. While not as deep as <em>Elden Ring’s</em> build system, they feel meaningful enough, and some relic effects are fun to experiment with.</p>
+pMeta-progression comes through Relics and permanent upgrades unlocked between runs. While not as deep as emElden Ring’sem build system, they feel meaningful enough, and some relic effects are fun to experiment with.p
 
-<p>The option to play solo exists, but co-op elevates the experience. Different Nightfarer roles — tank, damage dealer, support — really matter in tougher fights, especially in “Deep of Night” endgame content. Solo runs are viable, but it’s clear the design favours group play.</p>
+pThe option to play solo exists, but co-op elevates the experience. Different Nightfarer roles — tank, damage dealer, support — really matter in tougher fights, especially in “Deep of Night” endgame content. Solo runs are viable, but it’s clear the design favours group play.p
 
-<p>True to FromSoftware heritage, <em>Nightreign</em> doesn’t skimp on atmosphere. Landscapes are glorious, creatures horrifying, and magic wondrously colourful. Twisted versions of Limgrave deliver well, while music and boss themes punctuate tension. Performance is solid on modern hardware, though hectic battles sometimes cause frame dips.</p>
+pTrue to FromSoftware heritage, emNightreignem doesn’t skimp on atmosphere. Landscapes are glorious, creatures horrifying, and magic wondrously colourful. Twisted versions of Limgrave deliver well, while music and boss themes punctuate tension. Performance is solid on modern hardware, though hectic battles sometimes cause frame dips.p
 
-<p>Still, variety is a weak point. Camps, enemies, and layouts repeat too often, dulling the experience. Certain bosses can feel unfairly harsh and punishing for newcomers. And in a game so reliant on teamwork, bad random teammates or unlucky loot can ruin a run.</p>
+pStill, variety is a weak point. Camps, enemies, and layouts repeat too often, dulling the experience. Certain bosses can feel unfairly harsh and punishing for newcomers. And in a game so reliant on teamwork, bad random teammates or unlucky loot can ruin a run.p
 
-<p>Fans of <em>Elden Ring’s</em> deep build customization may also feel restricted. If you loved the open-world freedom, <em>Nightreign’s</em> constraints might feel too tight.</p>
+pFans of emElden Ring’sem deep build customization may also feel restricted. If you loved the open-world freedom, emNightreign’sem constraints might feel too tight.p
 
-<h3>Verdict</h3>
-<p><em>Elden Ring: Nightreign</em> is not <em>Elden Ring</em>. It doesn’t try to be. It’s a furious, fast-paced roguelike co-op distilled from FromSoftware’s purest DNA. For those who embrace speed, risk, and repetition, it delivers high payoff — moments of triumph, dynamic boss fights, and plenty of loot. For others, the lack of depth and variety may leave a sour aftertaste.</p>
+h3Verdicth3
+pemElden Ring Nightreignem is not emElden Ringem. It doesn’t try to be. It’s a furious, fast-paced roguelike co-op distilled from FromSoftware’s purest DNA. For those who embrace speed, risk, and repetition, it delivers high payoff — moments of triumph, dynamic boss fights, and plenty of loot. For others, the lack of depth and variety may leave a sour aftertaste.p
 
-<p><strong>Score: 4/5 ★★★★☆</strong></p>
+pstrongScore 45 ★★★★☆strongp
 
-<h3>Rating Summary</h3>
-<p>Visuals ★★★★★<br>
-Gameplay ★★★★☆<br>
-Variety ★★★☆☆<br>
-Multiplayer ★★★★☆<br>
-Progression ★★★★☆</p>
+h3Rating Summaryh3
+pVisuals ★★★★★br
+Gameplay ★★★★☆br
+Variety ★★★☆☆br
+Multiplayer ★★★★☆br
+Progression ★★★★☆p
 
-<h3>Should You Play It?</h3>
-<p>If you are a fan of <em>Elden Ring</em>, <em>Dark Souls</em>, and enjoy tight combat, teamwork, and roguelike challenges — yes, this is for you.<br>
-If you prefer exploration, story pacing, deep customization, or solo adventuring — you may find it lacking.<br>
-Playing with friends is the best experience, while random matchmaking can be frustrating.</p>
+h3Should You Play Ith3
+pIf you are a fan of emElden Ringem, emDark Soulsem, and enjoy tight combat, teamwork, and roguelike challenges — yes, this is for you.br
+If you prefer exploration, story pacing, deep customization, or solo adventuring — you may find it lacking.br
+Playing with friends is the best experience, while random matchmaking can be frustrating.p
 
-<p>Written by Casimir Yiontis</p>
+pWritten by Casimir Yiontisp
 
-      <h2 id="cydus">News</h2>
-<h2>Calling All Players</h2>
-        <h2 style="color: #aaa; font-family: Arial, sans-serif; font-weight: normal; font-size: 20px; margin-top: 10px; text-align: left;">
+      h2 id=cydusNewsh2
+h2Calling All Playersh2
+        h2 style=color #aaa; font-family Arial, sans-serif; font-weight normal; font-size 20px; margin-top 10px; text-align left;
     Melbourne’s oldest internet café celebrates it's 25th birthday.
-  </h2>
-<p><em>14/08/2025</em></p>
-      <img src="https://i.imgur.com/42c1Isi.jpeg" width="50%"
-        height="auto">
-        <p>It’s estimated there are over 20,000 internet cafés worldwide, with 65 in Melbourne. Among them, Cydus stands out. First opened in 2000, it is the longest-running internet café in the city — and it’s about to celebrate it's 25th birthday.</p>
+  h2
+pem14082025emp
+      img src=httpsi.imgur.com42c1Isi.jpeg width=50%
+        height=auto
+        pIt’s estimated there are over 20,000 internet cafés worldwide, with 65 in Melbourne. Among them, Cydus stands out. First opened in 2000, it is the longest-running internet café in the city — and it’s about to celebrate it's 25th birthday.p
 
-        <p>But before we leap into celebrations, a quick look at the history of internet cafés...</p>
+        pBut before we leap into celebrations, a quick look at the history of internet cafés...p
       
-        <p>Originally designed as places to meet friends, surf the web, and enjoy a cup of coffee, internet cafés have since become increasingly game-focused.</p>
+        pOriginally designed as places to meet friends, surf the web, and enjoy a cup of coffee, internet cafés have since become increasingly game-focused.p
 
-        <p>When they first appeared, most people had no way of checking their emails outside of homes and offices. The introduction of free web-based services like Hotmail sent their popularity soaring.</p>
+        pWhen they first appeared, most people had no way of checking their emails outside of homes and offices. The introduction of free web-based services like Hotmail sent their popularity soaring.p
 
-        <p>PCs nowadays are the undisputed champions of modern hardware, capable of processing billions of instructions per second and rendering immense, detailed environments at lightning-fast speeds. Enough to do your taxes, map the human genome, and be home in time for dinner.</p>
+        pPCs nowadays are the undisputed champions of modern hardware, capable of processing billions of instructions per second and rendering immense, detailed environments at lightning-fast speeds. Enough to do your taxes, map the human genome, and be home in time for dinner.p
 
-        <p>In Melbourne, internet cafés are a nexus for late-night activity and rambunctious outings with friends. Often open 24 hours a day, seven days a week, they provide respite from the bustling pubs and clubs usually associated with a night on the town. For many, they are like a home away from home.</p>
+        pIn Melbourne, internet cafés are a nexus for late-night activity and rambunctious outings with friends. Often open 24 hours a day, seven days a week, they provide respite from the bustling pubs and clubs usually associated with a night on the town. For many, they are like a home away from home.p
 
-        <p><em>“It’s a great place to unwind. I come here at least once a week” said Henry Li, a teenager who travelled to Cydus from Brunswick. “Elden Ring: Nightrein is awesome — every decision counts, and the stakes are high. But it’s also a really beautiful world to explore.”</em></p>
+        pem“It’s a great place to unwind. I come here at least once a week” said Henry Li, a teenager who travelled to Cydus from Brunswick. “Elden Ring Nightrein is awesome — every decision counts, and the stakes are high. But it’s also a really beautiful world to explore.”emp
 
-        <p>Cydus has been open for 25 years. After two and a half decades of being open to the public, this is what owner Michael Chan had to say about his business:</p>
+        pCydus has been open for 25 years. After two and a half decades of being open to the public, this is what owner Michael Chan had to say about his businessp
 
-        <p><em>“When we first started, people came in just to check emails or browse the web. Now it’s all about gaming, and the social side of it. People come here because they want to share that experience.”</em></p>
+        pem“When we first started, people came in just to check emails or browse the web. Now it’s all about gaming, and the social side of it. People come here because they want to share that experience.”emp
 
-        <p>Video games are often painted as an anti-social pastime. There is some truth to the stereotype, but Cydus’s history suggests otherwise.</p>
+        pVideo games are often painted as an anti-social pastime. There is some truth to the stereotype, but Cydus’s history suggests otherwise.p
 
-        <p><em>“Internet cafés actually bring people together,” Chan said. “You might be sitting next to someone you’ve never met, but you end up on the same team and walk out as friends. That doesn’t happen when you’re playing alone at home.”</em></p>
+        pem“Internet cafés actually bring people together,” Chan said. “You might be sitting next to someone you’ve never met, but you end up on the same team and walk out as friends. That doesn’t happen when you’re playing alone at home.”emp
 
-        <p>Over 25 years, Chan has watched his customer base expand and evolve. “Our demographic is wide. We get uni students after lectures, people coming in after work, and groups of friends meeting up late at night. It’s become a second home for a lot of people.”</p>
+        pOver 25 years, Chan has watched his customer base expand and evolve. “Our demographic is wide. We get uni students after lectures, people coming in after work, and groups of friends meeting up late at night. It’s become a second home for a lot of people.”p
 
-        <p>Cydus regularly updates its PCs and offers deals for regulars, something Chan sees as crucial to staying relevant. “Other cafés can feel transactional. Here, we run competitions, host events, and make sure the place feels welcoming. That’s what keeps people coming back.”</p>
+        pCydus regularly updates its PCs and offers deals for regulars, something Chan sees as crucial to staying relevant. “Other cafés can feel transactional. Here, we run competitions, host events, and make sure the place feels welcoming. That’s what keeps people coming back.”p
 
-        <p>From email terminals to eSports hubs, Cydus has endured by adapting to change while keeping its doors open to the community. And according to Chan, the mission hasn’t changed.</p>
+        pFrom email terminals to eSports hubs, Cydus has endured by adapting to change while keeping its doors open to the community. And according to Chan, the mission hasn’t changed.p
 
-        <p><em>“As long as people love gaming together in the same space, cafés like this will survive,” he said.</em></p>
+        pem“As long as people love gaming together in the same space, cafés like this will survive,” he said.emp
 
-        <p>Written by Casimir Yiontis</p>
+        pWritten by Casimir Yiontisp
       
-<h2>News</h2>
-<h2 id="summer-games-fest-2025">Summer Game Fest 2025</h2>
-      <p><em>07/06/2025</em></p>
-      <img src="https://cdn.mos.cms.futurecdn.net/pAgh4TNRRiPZKoPYGrHptS-970-80.jpg" width="50%"
-        height="auto">
+h2Newsh2
+h2 id=summer-games-fest-2025Summer Game Fest 2025h2
+      pem07062025emp
+      img src=httpscdn.mos.cms.futurecdn.netpAgh4TNRRiPZKoPYGrHptS-970-80.jpg width=50%
+        height=auto
 
-<p>Summer Game Fest 2025 just aired with an exciting flurry of game announcements. Here are some of the games that we're most excited for: </p>
+pSummer Game Fest 2025 just aired with an exciting flurry of game announcements. Here are some of the games that we're most excited for p
 
-        <p><strong>Sonic Racing Cross Worlds</strong><br>
-Sonic returns to the track with a chaotic new twist. <em>Cross Worlds</em> merges high-speed racing with multiverse mechanics, throwing characters from different Sonic timelines into neon-soaked circuits that warp mid-race. With a mix of classic drift-heavy kart racing and dimension-bending hazards, it’s one of the most visually ambitious Sonic spin-offs to date.</p>
+        pstrongSonic Racing Cross Worldsstrongbr
+Sonic returns to the track with a chaotic new twist. emCross Worldsem merges high-speed racing with multiverse mechanics, throwing characters from different Sonic timelines into neon-soaked circuits that warp mid-race. With a mix of classic drift-heavy kart racing and dimension-bending hazards, it’s one of the most visually ambitious Sonic spin-offs to date.p
 
-<p><strong>Lego Voyagers</strong><br>
-A fresh IP from the Lego games team, <em>Lego Voyagers</em> trades traditional brick-breaking for galaxy-spanning exploration. It’s an open-world sci-fi adventure where players build and pilot customizable starships, recruit quirky crew members, and visit procedurally-generated planets. The tone is lighthearted, but the scope is surprisingly vast.</p>
+pstrongLego Voyagersstrongbr
+A fresh IP from the Lego games team, emLego Voyagersem trades traditional brick-breaking for galaxy-spanning exploration. It’s an open-world sci-fi adventure where players build and pilot customizable starships, recruit quirky crew members, and visit procedurally-generated planets. The tone is lighthearted, but the scope is surprisingly vast.p
 
-<p><strong>Mina the Hollower</strong><br>
-Yacht Club’s retro love letter to Game Boy Color action titles is finally nearing release. <em>Mina the Hollower</em> blends gothic horror with fast-paced top-down combat, featuring tight dungeons, whip-based action, and a moody chiptune soundtrack. It looks and plays like a lost classic, with all the polish of modern design.</p>
+pstrongMina the Hollowerstrongbr
+Yacht Club’s retro love letter to Game Boy Color action titles is finally nearing release. emMina the Hollowerem blends gothic horror with fast-paced top-down combat, featuring tight dungeons, whip-based action, and a moody chiptune soundtrack. It looks and plays like a lost classic, with all the polish of modern design.p
 
-<p><strong>Stranger Than Heaven</strong><br>
-This mysterious new narrative game from Annapurna had one of the most talked-about trailers at SGF. Blending surreal dreamscapes, romantic drama, and light puzzle mechanics, <em>Stranger Than Heaven</em> looks like a spiritual successor to <em>What Remains of Edith Finch</em>—but weirder, more experimental, and unapologetically emotional.</p>
+pstrongStranger Than Heavenstrongbr
+This mysterious new narrative game from Annapurna had one of the most talked-about trailers at SGF. Blending surreal dreamscapes, romantic drama, and light puzzle mechanics, emStranger Than Heavenem looks like a spiritual successor to emWhat Remains of Edith Finchem—but weirder, more experimental, and unapologetically emotional.p
 
-<p><strong>Resident Evil 9</strong><br>
-Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusion to the Winters saga. Set in a cursed island off the coast of the Pacific Northwest, the game leans into psychological horror, with new enemies inspired by urban legends and folklore. The gameplay looks slower and more atmospheric than <em>RE Village</em>, but no less terrifying.</p>
+pstrongResident Evil 9strongbr
+Capcom pulls back the curtain on emResident Evil 9em, the chilling conclusion to the Winters saga. Set in a cursed island off the coast of the Pacific Northwest, the game leans into psychological horror, with new enemies inspired by urban legends and folklore. The gameplay looks slower and more atmospheric than emRE Villageem, but no less terrifying.p
 
-<p>Written by Casmir Yiontis</p>
+pWritten by Casmir Yiontisp
 
-<h2 id="modding-8bitdo-arcade">Modding My 8BitDo Arcade Stick</h2>
-      <p><em>12/05/2025</em></p>
-      <img src="https://i.imgur.com/PjYn79f.jpeg" width="50%"
-        height="auto">
+h2 id=modding-8bitdo-arcadeModding My 8BitDo Arcade Stickh2
+      pem12052025emp
+      img src=httpsi.imgur.comPjYn79f.jpeg width=50%
+        height=auto
 
-        <p>I've added some different-coloured Sanwa buttons to my 8BitDo Xbox Arcade Stick!! I picked these up the last time I was in Japan and they look and feel great. Definitely an improvement over the original buttons.</p>
-        <p>The replacement was fairly simple and just involved unscrewing the base plate and unplugging the old buttons. I took me longer than I expected to find the correct size screwdriver though haha.</p>
+        pI've added some different-coloured Sanwa buttons to my 8BitDo Xbox Arcade Stick!! I picked these up the last time I was in Japan and they look and feel great. Definitely an improvement over the original buttons.p
+        pThe replacement was fairly simple and just involved unscrewing the base plate and unplugging the old buttons. I took me longer than I expected to find the correct size screwdriver though haha.p
 
-      <h2>News</h2>
-<h2 id="nintendo-switch-2-announced">Nintendo Switch 2 Announced</h2>
-      <p><em>03/04/2025</em></p>
-      <img src="https://cdn.mos.cms.futurecdn.net/7BeJaCY6Jzprdd7cdinRd-970-80.jpg" width="50%"
-        height="auto">
+      h2Newsh2
+h2 id=nintendo-switch-2-announcedNintendo Switch 2 Announcedh2
+      pem03042025emp
+      img src=httpscdn.mos.cms.futurecdn.net7BeJaCY6Jzprdd7cdinRd-970-80.jpg width=50%
+        height=auto
 
-      <p style="font-size: 20px">Nintendo has officially announced the Nintendo Switch 2, set to launch on June 5, 2025, with a starting price of $449.99 AUD. This next-generation hybrid console builds upon the success of its predecessor, introducing significant hardware upgrades and new features designed to enhance the gaming experience.</p>
-<p style="font-size: 20px">The Switch 2 boasts a 7.9-inch 1080p LCD touchscreen with HDR10 support and a 120Hz refresh rate, offering sharper visuals and smoother gameplay. Powered by a custom Nvidia Tegra processor, the console supports 4K resolution when docked, providing a substantial performance boost over the original Switch.</p>
-<p style="font-size: 20px">Storage capacity has been increased to 256GB, expandable via microSD Express cards. Connectivity options include Wi-Fi 6 and Bluetooth support, ensuring faster and more stable connections. The console also features improved battery life, catering to gamers on the go.</p>
-<p style="font-size: 20px">The new Joy-Con 2 controllers attach magnetically and introduce optical mouse-sensor functionality, allowing for precise control in compatible games. These controllers also support a new feature called GameChat, enabling voice and video communication during gameplay.</p>
-<p style="font-size: 20px">At launch, the Switch 2 will be accompanied by titles such as Mario Kart World. The console maintains backward compatibility with most Nintendo Switch games, ensuring a seamless transition for existing users. Additionally, select titles will receive performance enhancements when played on the new hardware.</p>
-<p style="font-size: 20px">Pre-orders for the Switch 2 began on April 24, 2025, and were met with overwhelming demand, leading to rapid sellouts and website crashes at major retailers like Walmart, Best Buy, and GameStop. Nintendo has implemented an invitation-based pre-order system through the My Nintendo Store, prioritizing users with active Nintendo Switch Online memberships and significant playtime history. Despite these measures, the company has acknowledged potential delays in order fulfillment due to high demand.</p>
-<p style="font-size: 20px">The standard Switch 2 is priced at $449.99 AUD, while a bundle including Mario Kart World is available for $499.99 AUD. Accessory prices have seen increases, attributed in part to new tariffs affecting manufacturing costs.</p>
-<p style="font-size: 20px">The Nintendo Switch 2 represents a significant advancement in hybrid gaming, offering enhanced performance, innovative features, and a huge game library. While pre-order challenges persist, the console's launch is primed to be a major event in gaming this year.</p>
+      p style=font-size 20pxNintendo has officially announced the Nintendo Switch 2, set to launch on June 5, 2025, with a starting price of $449.99 AUD. This next-generation hybrid console builds upon the success of its predecessor, introducing significant hardware upgrades and new features designed to enhance the gaming experience.p
+p style=font-size 20pxThe Switch 2 boasts a 7.9-inch 1080p LCD touchscreen with HDR10 support and a 120Hz refresh rate, offering sharper visuals and smoother gameplay. Powered by a custom Nvidia Tegra processor, the console supports 4K resolution when docked, providing a substantial performance boost over the original Switch.p
+p style=font-size 20pxStorage capacity has been increased to 256GB, expandable via microSD Express cards. Connectivity options include Wi-Fi 6 and Bluetooth support, ensuring faster and more stable connections. The console also features improved battery life, catering to gamers on the go.p
+p style=font-size 20pxThe new Joy-Con 2 controllers attach magnetically and introduce optical mouse-sensor functionality, allowing for precise control in compatible games. These controllers also support a new feature called GameChat, enabling voice and video communication during gameplay.p
+p style=font-size 20pxAt launch, the Switch 2 will be accompanied by titles such as Mario Kart World. The console maintains backward compatibility with most Nintendo Switch games, ensuring a seamless transition for existing users. Additionally, select titles will receive performance enhancements when played on the new hardware.p
+p style=font-size 20pxPre-orders for the Switch 2 began on April 24, 2025, and were met with overwhelming demand, leading to rapid sellouts and website crashes at major retailers like Walmart, Best Buy, and GameStop. Nintendo has implemented an invitation-based pre-order system through the My Nintendo Store, prioritizing users with active Nintendo Switch Online memberships and significant playtime history. Despite these measures, the company has acknowledged potential delays in order fulfillment due to high demand.p
+p style=font-size 20pxThe standard Switch 2 is priced at $449.99 AUD, while a bundle including Mario Kart World is available for $499.99 AUD. Accessory prices have seen increases, attributed in part to new tariffs affecting manufacturing costs.p
+p style=font-size 20pxThe Nintendo Switch 2 represents a significant advancement in hybrid gaming, offering enhanced performance, innovative features, and a huge game library. While pre-order challenges persist, the console's launch is primed to be a major event in gaming this year.p
 
-<p style="font-size: 20px">Written by Casimir Yiontis
+p style=font-size 20pxWritten by Casimir Yiontis
 
 
-      <h2 id="making-a-video-game-day-1">Making a Video Game</h2>
-      <p><em>12/11/2024</em></p>
-      <img src="https://i.imgur.com/Ocuh3Cq.png" alt="Line Void progress" />
-      <p>
-        My progress so far on "Line Void" (Title work in progress), a space shmup
+      h2 id=making-a-video-game-day-1Making a Video Gameh2
+      pem12112024emp
+      img src=httpsi.imgur.comOcuh3Cq.png alt=Line Void progress 
+      p
+        My progress so far on Line Void (Title work in progress), a space shmup
         game. Right now I'm just following a tutorial on YouTube that's teaching me
-        how to make Asteroids, which is why the project is called "Asteroids".
-      </p>
-      <p>Currently I'm able to accelerate and rotate the ship.</p>
-      <p>
+        how to make Asteroids, which is why the project is called Asteroids.
+      p
+      pCurrently I'm able to accelerate and rotate the ship.p
+      p
         I'm excited to start working on the ship sprites. Hopefully will be easy
         to import them into Unity.
-      </p>
+      p
 
-      <h2 id="behind-the-scenes-html">Behind The Scenes: HTML</h2>
-      <p><em>01/11/2024</em></p>
-      <img src="https://i.imgur.com/sXy89Hd.png" alt="HTML code screenshot" />
-      <p>This is the code I used to make this website.</p>
-      <p>The one you're looking at right now.</p>
+      h2 id=behind-the-scenes-htmlBehind The Scenes HTMLh2
+      pem01112024emp
+      img src=httpsi.imgur.comsXy89Hd.png alt=HTML code screenshot 
+      pThis is the code I used to make this website.p
+      pThe one you're looking at right now.p
 
-      <h2 id="positioning-gifs">Positioning GIFs</h2>
-      <p><em>01/11/2024</em></p>
-      <p>
-        I moved my Kirby Floating Gif so now it's next to the Page Title :D Lookin'
+      h2 id=positioning-gifsPositioning GIFsh2
+      pem01112024emp
+      p
+        I moved my Kirby Floating Gif so now it's next to the Page Title D Lookin'
         good, Kirby. Hang in there, buddy.
-      </p>
+      p
 
-      <h2 id="monster-hunter-gu-save-transfer">Monster Hunter GU Save Transfer</h2>
-      <p><em>20/08/2024</em></p>
-      <p>
+      h2 id=monster-hunter-gu-save-transferMonster Hunter GU Save Transferh2
+      pem20082024emp
+      p
         This week I made a return to Monster Hunter, one of my all time favourite
         franchises. Specifically Monster Hunter Generations Ultimate, a 1080p high
         resolution remake of the game originally released on the 3DS. Because the
@@ -381,174 +381,174 @@ Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusi
         through a ridiculously laborious process that took me over two days, I
         managed to get my old save onto the Switch with a little help from my old
         friend Hex Editor. In summary, cross-platform save transfers are a nightmare.
-      </p>
+      p
 
-      <h2 id="game-review">Review</h2>
-      <h2>The Typing of the Dead</h2>
-      <p><em>01/07/2024</em></p>
+      h2 id=game-reviewReviewh2
+      h2The Typing of the Deadh2
+      pem01072024emp
 
-      <img
-        src="https://www.giantbomb.com/a/uploads/original/0/340/370463-totd.jpg"
-        alt="Typing of the Dead"
-      />
+      img
+        src=httpswww.giantbomb.comauploadsoriginal0340370463-totd.jpg
+        alt=Typing of the Dead
+      
 
-      <p>
+      p
         Maybe you’re a fan of the original games and you’re looking to relive old
         memories with a new twist. Or maybe, like me, you’re trying to brush up on
         your typing skills.
-      </p>
+      p
 
-      <p>
-        Either way you look at it, <em>The Typing of the Dead</em> is a fast-paced,
+      p
+        Either way you look at it, emThe Typing of the Deadem is a fast-paced,
         thrilling adventure back through one of the greatest on-rail shooters to
         ever hit the horror genre.
-      </p>
+      p
 
-      <p>
+      p
         It’s a bit jarring at first when you’re thrown into a world of zombies with
-        only your keyboard to protect yourself. But that’s what makes <em>The Typing of the Dead</em> all the
+        only your keyboard to protect yourself. But that’s what makes emThe Typing of the Deadem all the
         more engaging.
-      </p>
+      p
 
-      <p>
+      p
         On a technical level, the game runs very smoothly and the inputs have
         lightning-fast response time, which makes laying out zombies with your
         trusty keyboard all the more enjoyable.
-      </p>
+      p
 
-      <p>
+      p
         Typing out words or phrases to dispatch zombies adds an unexpectedly
         satisfying layer of challenge and skill. The game cleverly integrates its
         typing mechanics into the familiar on-rails shooting format, requiring
         quick thinking and accurate typing under pressure.
-      </p>
+      p
 
-      <p>
+      p
         I found that some of the boss fights were quite challenging in the later
         stages. These encounters require not only typing speed but also strategic
         thinking, as each boss presents unique patterns and weaknesses.
-      </p>
+      p
 
-      <p>
+      p
         It’s a refreshing twist on traditional boss battles, where victory hinges
         on how well you can type out commands while dodging attacks.
-      </p>
+      p
 
-      <h2 id="hiking-through-japan-kumano-kodo">Hiking through Japan: Kumano Kodo</h2>
-      <p><em>01/06/2024</em></p>
-      <p>
+      h2 id=hiking-through-japan-kumano-kodoHiking through Japan Kumano Kodoh2
+      pem01062024emp
+      p
       
 
-       <h2 id="working-with-ableton">Making Music in <em>The Twilight Zone</em></h2>
-    <p><em>20/02/2024</em></p>
-    <p style="font-size: 20px">In this project I used voice samples from the episode <em>"What You Need"</em> (Season 1
-      Episode 12) of The Twlight Zone to make a dance track. <p style="font-size: 20px">It was a very enjoyable process and I had a lot of fun getting to know how to use Ableton. </p>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1484837161&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/casimir-yiontis" title="Caz" target="_blank" style="color: #cccccc; text-decoration: none;">Caz</a> · <a href="https://soundcloud.com/casimir-yiontis/slippery-shoes" title="Slippery Shoes" target="_blank" style="color: #cccccc; text-decoration: none;">Slippery Shoes</a></div>
+       h2 id=working-with-abletonMaking Music in emThe Twilight Zoneemh2
+    pem20022024emp
+    p style=font-size 20pxIn this project I used voice samples from the episode emWhat You Needem (Season 1
+      Episode 12) of The Twlight Zone to make a dance track. p style=font-size 20pxIt was a very enjoyable process and I had a lot of fun getting to know how to use Ableton. p
+      iframe width=100% height=300 scrolling=no frameborder=no allow=autoplay src=httpsw.soundcloud.complayerurl=https%3Aapi.soundcloud.comtracks1484837161&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=trueiframediv style=font-size 10px; color #cccccc;line-break anywhere;word-break normal;overflow hidden;white-space nowrap;text-overflow ellipsis; font-family Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight 100;a href=httpssoundcloud.comcasimir-yiontis title=Caz target=_blank style=color #cccccc; text-decoration none;Caza · a href=httpssoundcloud.comcasimir-yiontisslippery-shoes title=Slippery Shoes target=_blank style=color #cccccc; text-decoration none;Slippery Shoesadiv
     
-      <h2 id="an-american-werewolf">Review</h2>
-    <h2><em>An American Werewolf in London</em></h2>
-    <p><em>12/10/2023</em></p>
-<p>
-      <img src="https://www.slashfilm.com/img/gallery/an-american-werewolf-in-london-traces-its-roots-to-a-1940s-monster-movie-classic/intro-1664645354.jpg?s=200" alt="Jack and David at The Slaughtered Lamb"
-</p>
-<p style="font-size: 20px">John Landis's "An American Werewolf in London" is a timeless classic that merges horror and dark comedy with groundbreaking special effects. Released in 1981, this film remains a standout in the werewolf genre, known for its innovative use of transformation effects by Rick Baker, which earned him the first Academy Award for Best Makeup.<p></p>
+      h2 id=an-american-werewolfReviewh2
+    h2emAn American Werewolf in Londonemh2
+    pem12102023emp
+p
+      img src=httpswww.slashfilm.comimggalleryan-american-werewolf-in-london-traces-its-roots-to-a-1940s-monster-movie-classicintro-1664645354.jpgs=200 alt=Jack and David at The Slaughtered Lamb
+p
+p style=font-size 20pxJohn Landis's An American Werewolf in London is a timeless classic that merges horror and dark comedy with groundbreaking special effects. Released in 1981, this film remains a standout in the werewolf genre, known for its innovative use of transformation effects by Rick Baker, which earned him the first Academy Award for Best Makeup.pp
 
-<p style="font-size: 20px">The story follows two American backpackers, David (played by David Naughton) and Jack (played by Griffin Dunne), who encounter a horrifying creature while hiking across the English countryside. Jack is killed by the creature, and David wakes up in a London hospital to discover he is now cursed to become a werewolf.<p></p>
+p style=font-size 20pxThe story follows two American backpackers, David (played by David Naughton) and Jack (played by Griffin Dunne), who encounter a horrifying creature while hiking across the English countryside. Jack is killed by the creature, and David wakes up in a London hospital to discover he is now cursed to become a werewolf.pp
   
-  <p style="font-size: 20px">The film's strength lies in its ability to blend horror with humor seamlessly. Landis deftly navigates between moments of genuine tension and absurdity, creating an atmosphere that keeps the audience on edge while also allowing for moments of dark comedy. The interactions between David and the increasingly decomposed ghost of Jack provide much of the film's humor, serving as both comic relief and a chilling reminder of David's impending doom.<p></p>
+  p style=font-size 20pxThe film's strength lies in its ability to blend horror with humor seamlessly. Landis deftly navigates between moments of genuine tension and absurdity, creating an atmosphere that keeps the audience on edge while also allowing for moments of dark comedy. The interactions between David and the increasingly decomposed ghost of Jack provide much of the film's humor, serving as both comic relief and a chilling reminder of David's impending doom.pp
   
-  <p style="font-size: 20px">Rick Baker's makeup and special effects work in "An American Werewolf in London" remains unparalleled even by today's standards. The werewolf transformation scene, in particular, is a masterclass in practical effects, as David painfully contorts and changes into a creature of nightmares. The visceral nature of the transformation, combined with David's desperate attempts to come to terms with his new reality, evokes both sympathy and terror.<p></p>
+  p style=font-size 20pxRick Baker's makeup and special effects work in An American Werewolf in London remains unparalleled even by today's standards. The werewolf transformation scene, in particular, is a masterclass in practical effects, as David painfully contorts and changes into a creature of nightmares. The visceral nature of the transformation, combined with David's desperate attempts to come to terms with his new reality, evokes both sympathy and terror.pp
   
-  <p style="font-size: 20px">Beyond its technical achievements, the film also explores deeper themes of identity, guilt, and the consequences of one's actions. David's struggle with his newfound monstrous nature serves as a metaphor for the loss of innocence and the darker aspects of humanity that lie within us all.<p></p>
+  p style=font-size 20pxBeyond its technical achievements, the film also explores deeper themes of identity, guilt, and the consequences of one's actions. David's struggle with his newfound monstrous nature serves as a metaphor for the loss of innocence and the darker aspects of humanity that lie within us all.pp
   
-  <p style="font-size: 20px">In addition to the compelling performances by Naughton and Dunne, Jenny Agutter and John Woodvine deliver strong supporting roles, grounding the fantastical elements of the story in a believable reality.<p></p>
+  p style=font-size 20pxIn addition to the compelling performances by Naughton and Dunne, Jenny Agutter and John Woodvine deliver strong supporting roles, grounding the fantastical elements of the story in a believable reality.pp
   
-  <p style="font-size: 20px">"An American Werewolf in London" remains a must-watch for horror enthusiasts and film buffs alike, not only for its groundbreaking effects but also for its ability to blend scares with laughs and its exploration of deeper themes. It's a film that has stood the test of time and continues to influence the horror genre to this day, making it a true classic in every sense.<p></p>
+  p style=font-size 20pxAn American Werewolf in London remains a must-watch for horror enthusiasts and film buffs alike, not only for its groundbreaking effects but also for its ability to blend scares with laughs and its exploration of deeper themes. It's a film that has stood the test of time and continues to influence the horror genre to this day, making it a true classic in every sense.pp
   
-  <p style="font-size: 20px"><em></em>Rating: 4.5/5<em></em><p></p>
+  p style=font-size 20pxememRating 4.55emempp
   
-  <p style="font-size: 20px">"An American Werewolf in London" is a rare gem that successfully marries horror, comedy, and pathos, offering a cinematic experience that lingers long after the credits roll.</p>
+  p style=font-size 20pxAn American Werewolf in London is a rare gem that successfully marries horror, comedy, and pathos, offering a cinematic experience that lingers long after the credits roll.p
       
 
-        <h2 id="elden-ring">Review</h2>
-        <h2>Elden Ring</h2>
-        <p><em>05/08/2023</em></p>
+        h2 id=elden-ringReviewh2
+        h2Elden Ringh2
+        pem05082023emp
 
-        <p><img src="https://www.gamereactor.eu/media/49/eldenring_3734963.png" alt="The World of Elden Ring"</p>
+        pimg src=httpswww.gamereactor.eumedia49eldenring_3734963.png alt=The World of Elden Ringp
 
-         <p style="font-size: 20px">Looking back over my 200 hours with Elden Ring, it’s hard not smile when I reminisce about the time spent in the vast and haunting world of Elden Ring. If you’re a long-time fan of FromSoftware like I am, you’ll know what I’m talking about. Miyazaki has truly outdone himself in this latest entry of the Souls series.</p>
-<p style="font-size: 20px">To those who have played previous titles such as the Dark Souls games and Bloodborne, Elden Ring will feel like slipping into a pair of well-worn denims, feeling and handling very much like its predecessors; a style fans know all too well.</p>
-<p style="font-size: 20px">Elden Ring transports players to the mythical land of the Lands Between, a sprawling open-world setting that exudes both beauty and desolation. From verdant forests to towering mountains and eerie ruins, every corner of this world is meticulously crafted to evoke a sense of wonder and danger. The landscape is teeming with formidable enemies, hidden treasures, and secrets waiting to be unearthed.</p>
-<p style="font-size: 20px">True to FromSoftware’s legacy, Elden Ring offers challenging gameplay that rewards perseverance and strategic thinking. Players can create their character, choosing from a variety of classes and abilities that cater to different playstyles.</p>
-<p style="font-size: 20px">Combat is intense and methodical, requiring precise timing, careful observation of enemy patterns, and utilization of a wide array of weapons and magic.
+         p style=font-size 20pxLooking back over my 200 hours with Elden Ring, it’s hard not smile when I reminisce about the time spent in the vast and haunting world of Elden Ring. If you’re a long-time fan of FromSoftware like I am, you’ll know what I’m talking about. Miyazaki has truly outdone himself in this latest entry of the Souls series.p
+p style=font-size 20pxTo those who have played previous titles such as the Dark Souls games and Bloodborne, Elden Ring will feel like slipping into a pair of well-worn denims, feeling and handling very much like its predecessors; a style fans know all too well.p
+p style=font-size 20pxElden Ring transports players to the mythical land of the Lands Between, a sprawling open-world setting that exudes both beauty and desolation. From verdant forests to towering mountains and eerie ruins, every corner of this world is meticulously crafted to evoke a sense of wonder and danger. The landscape is teeming with formidable enemies, hidden treasures, and secrets waiting to be unearthed.p
+p style=font-size 20pxTrue to FromSoftware’s legacy, Elden Ring offers challenging gameplay that rewards perseverance and strategic thinking. Players can create their character, choosing from a variety of classes and abilities that cater to different playstyles.p
+p style=font-size 20pxCombat is intense and methodical, requiring precise timing, careful observation of enemy patterns, and utilization of a wide array of weapons and magic.
  
-<p style="font-size: 20px">The introduction of new mechanics adds fresh layers to gameplay, granting players access to powerful abilities and enhancing their combat prowess. This system encourages exploration and experimentation, as uncovering the mysteries surrounding the Elden Ring is key to unlocking its full potential.</p>
-<p style="font-size: 20px">The ability to jump is a revolutionary mechanic in FromSoft games and one that left players dumbfounded in the original gameplay trailers.</p>
-<p style="font-size: 20px">One of the most striking aspects of Elden Ring is its storytelling, heavily influenced by George R.R. Martin’s touch. The narrative depth and world-building are impressive, with lore intricately woven into the fabric of the game. Each location, character, and item contributes to a larger tapestry of mythology and history. The storytelling is often cryptic yet compelling, inviting players to piece together fragments of the world’s past and present. The atmosphere is hauntingly beautiful, enhanced by a dynamic day-night cycle and weather system that subtly shifts the mood of the environment.</p>
-<p style="font-size: 20px">From serene sunsets to ominous storms, each moment in Elden Ring feels alive and immersive, drawing players deeper into its enigmatic world. The game captures a sense of scale and grandeur that elevates every encounter, making even the smallest discovery feel monumental.</p>
-<p style="font-size: 20px">The rustling leaves, distant howls, and the echo of footsteps in abandoned ruins—create a soundscape that adds layers to the experience, pulling players into the story. This immersive atmosphere is further enriched by the use of symbolism throughout the game, where visual motifs and recurring themes reflect the struggles between light and darkness, hope and despair, enhancing the emotional weight of the narrative and making each player’s journey feel uniquely personal. As players delve deeper into the Lands Between, they are not merely observers of a story; they become integral parts of a living legend, where their choices echo through the intricate web of fate that binds the world together.</p>
-<p style="font-size: 20px">Beyond the individual experience, Elden Ring fosters a vibrant community of players. The shared experiences of triumph and defeat create a sense of camaraderie, as players discuss strategies, lore, and discoveries. The game’s rich lore and intricate mechanics inspire countless theories and discussions, enhancing the overall experience.</p>
-<p style="font-size: 20px">Replayability is another significant aspect of Elden Ring. With various classes, playstyles, and choices impacting the narrative and world, players are encouraged to embark on multiple journeys. Each playthrough offers the opportunity to uncover new secrets and experience the game from different perspectives, ensuring that the adventure remains fresh and engaging.</p>
-<p style="font-size: 20px">Prepare yourself for an epic journey through the Lands Between, where danger and discovery await at every turn. Elden Ring is not just a game; it’s an adventure that will test your skills, ignite your imagination, and leave you craving more. The legacy of FromSoftware continues to shine bright.</p>
+p style=font-size 20pxThe introduction of new mechanics adds fresh layers to gameplay, granting players access to powerful abilities and enhancing their combat prowess. This system encourages exploration and experimentation, as uncovering the mysteries surrounding the Elden Ring is key to unlocking its full potential.p
+p style=font-size 20pxThe ability to jump is a revolutionary mechanic in FromSoft games and one that left players dumbfounded in the original gameplay trailers.p
+p style=font-size 20pxOne of the most striking aspects of Elden Ring is its storytelling, heavily influenced by George R.R. Martin’s touch. The narrative depth and world-building are impressive, with lore intricately woven into the fabric of the game. Each location, character, and item contributes to a larger tapestry of mythology and history. The storytelling is often cryptic yet compelling, inviting players to piece together fragments of the world’s past and present. The atmosphere is hauntingly beautiful, enhanced by a dynamic day-night cycle and weather system that subtly shifts the mood of the environment.p
+p style=font-size 20pxFrom serene sunsets to ominous storms, each moment in Elden Ring feels alive and immersive, drawing players deeper into its enigmatic world. The game captures a sense of scale and grandeur that elevates every encounter, making even the smallest discovery feel monumental.p
+p style=font-size 20pxThe rustling leaves, distant howls, and the echo of footsteps in abandoned ruins—create a soundscape that adds layers to the experience, pulling players into the story. This immersive atmosphere is further enriched by the use of symbolism throughout the game, where visual motifs and recurring themes reflect the struggles between light and darkness, hope and despair, enhancing the emotional weight of the narrative and making each player’s journey feel uniquely personal. As players delve deeper into the Lands Between, they are not merely observers of a story; they become integral parts of a living legend, where their choices echo through the intricate web of fate that binds the world together.p
+p style=font-size 20pxBeyond the individual experience, Elden Ring fosters a vibrant community of players. The shared experiences of triumph and defeat create a sense of camaraderie, as players discuss strategies, lore, and discoveries. The game’s rich lore and intricate mechanics inspire countless theories and discussions, enhancing the overall experience.p
+p style=font-size 20pxReplayability is another significant aspect of Elden Ring. With various classes, playstyles, and choices impacting the narrative and world, players are encouraged to embark on multiple journeys. Each playthrough offers the opportunity to uncover new secrets and experience the game from different perspectives, ensuring that the adventure remains fresh and engaging.p
+p style=font-size 20pxPrepare yourself for an epic journey through the Lands Between, where danger and discovery await at every turn. Elden Ring is not just a game; it’s an adventure that will test your skills, ignite your imagination, and leave you craving more. The legacy of FromSoftware continues to shine bright.p
 
-<p style="font-size: 20px">Written by Casimir Yiontis</p>
+p style=font-size 20pxWritten by Casimir Yiontisp
 
 
-          <h2 id="kirby's-adventure-3ds">Review</h2>
-        <h2>Kirby's Adventure 3DS</h2>
-        <p><em>14/05/2023</em></p>
+          h2 id=kirby's-adventure-3dsReviewh2
+        h2Kirby's Adventure 3DSh2
+        pem14052023emp
 
-        <img src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2023/12/3ds-kirby-s-adventure-king-dedede.jpg"
-        width="40%"
-        height="auto">
+        img src=httpsstatic1.thegamerimages.comwordpresswp-contentuploads2023123ds-kirby-s-adventure-king-dedede.jpg
+        width=40%
+        height=auto
 
       
         
 
-        <h2><strong>The Bus Driver</strong></h2>
-        <p></p><em>22/06/2022</em></p>
+        h2strongThe Bus Driverstrongh2
+        ppem22062022emp
   
-          <p style="font-size: 20px">Reggie, a bus driver and an alcoholic is finishing his route for the night and stops for a pint on his way home at his usual pub: The Silver Moon Inn. He starts talking to an old man who he’s never seen before. The old man remarks on his bus driver uniform, and says he used to be a bus driver a long time ago, in outer space. He regales Reggie with stories about his trips through outer space and tells him that he’s from the moon. He shows him a bus drivers licence made of cardboard with his intergalactic credentials on it. Reggie doesn’t believe the old man of course, thinking he’s probably just a drunken senile old man. As he leaves the pub, he spots the old man down the street. The old man turns and winks at Reggie before he transforms into a cloud of stars and soars towards the moon.
-          The next day Reggie is driving his usual route and glances down at his bottle of bourbon in the drivers’ compartment, clinking away, before continuing on his journey.</p>
+          p style=font-size 20pxReggie, a bus driver and an alcoholic is finishing his route for the night and stops for a pint on his way home at his usual pub The Silver Moon Inn. He starts talking to an old man who he’s never seen before. The old man remarks on his bus driver uniform, and says he used to be a bus driver a long time ago, in outer space. He regales Reggie with stories about his trips through outer space and tells him that he’s from the moon. He shows him a bus drivers licence made of cardboard with his intergalactic credentials on it. Reggie doesn’t believe the old man of course, thinking he’s probably just a drunken senile old man. As he leaves the pub, he spots the old man down the street. The old man turns and winks at Reggie before he transforms into a cloud of stars and soars towards the moon.
+          The next day Reggie is driving his usual route and glances down at his bottle of bourbon in the drivers’ compartment, clinking away, before continuing on his journey.p
           
-          <p style="font-size: 20px"><strong>At the pub</strong></p>
-          <p style="font-size: 20px">Reggie sits alone in a booth, looking around the pub at the various goings-ons. Some teenagers playing pool, old people on the slot machines. </p>
-          <p style="font-size: 20px">“Mind if I join you?”</p>
-          <p style="font-size: 20px">Reggie looks up and sees an old man. He says he doesn’t mind as he is lonely and the old man seems harmless and might make for interesting conversation.<p></p>
-          <p style="font-size: 20px">“Sure.”<p></p>
-          <p style="font-size: 20px">“You a bus driver?”<p></p>
-          <p style="font-size: 20px">“What gave it away?” (He’s in uniform)<p></p>
-          <p style="font-size: 20px">The old man laughs and sits down in the booth opposite him.<p></p>
-          <p style="font-size: 20px">“I used tae be a bus driver once, ye see a lot of faces”<p></p>
-          <p style="font-size: 20px">“Yeah” he chuckles politely<p></p>
-          <p style="font-size: 20px">“Which routes are you oan?”<p></p>
-          <p style="font-size: 20px">“Black rock through Brighton is my usual”<p></p>
-          <p style="font-size: 20px">“Oooh I’ve been to black rock, lovely spot for fishing”<p></p>
+          p style=font-size 20pxstrongAt the pubstrongp
+          p style=font-size 20pxReggie sits alone in a booth, looking around the pub at the various goings-ons. Some teenagers playing pool, old people on the slot machines. p
+          p style=font-size 20px“Mind if I join you”p
+          p style=font-size 20pxReggie looks up and sees an old man. He says he doesn’t mind as he is lonely and the old man seems harmless and might make for interesting conversation.pp
+          p style=font-size 20px“Sure.”pp
+          p style=font-size 20px“You a bus driver”pp
+          p style=font-size 20px“What gave it away” (He’s in uniform)pp
+          p style=font-size 20pxThe old man laughs and sits down in the booth opposite him.pp
+          p style=font-size 20px“I used tae be a bus driver once, ye see a lot of faces”pp
+          p style=font-size 20px“Yeah” he chuckles politelypp
+          p style=font-size 20px“Which routes are you oan”pp
+          p style=font-size 20px“Black rock through Brighton is my usual”pp
+          p style=font-size 20px“Oooh I’ve been to black rock, lovely spot for fishing”pp
           
-          <p></p>
-          <p style="font-size: 20px"><em>There’s a foreboding silence between the two.</em><p></p>
-          <p></p>
+          pp
+          p style=font-size 20pxemThere’s a foreboding silence between the two.empp
+          pp
   
-          <p style="font-size: 20px">“...Do you fish?”<p></p>
-          <p style="font-size: 20px">“Pardon me, son?”<p></p>
-          <p style="font-size: 20px">“I said are you fisherman?”<p></p>
-          <p style="font-size: 20px">“No, you asked me if I fish. I do fish, but I’m no a fisher man”.<p></p>
-          <p style="font-size: 20px">“Oh right…” he takes a sip of his pint.<p></p>
-          <p style="font-size: 20px">“I’m a bus driver like you. Ooohhh I’ve been all over… long time ago mind you sonny”.<p></p>
-          <p style="font-size: 20px">Reggie looks down at the floor and smiles. He feels a strange warmth and connection with the stranger. Usually the pub is filled with regulars he’s seen a million times before, but he’s never seen this old man and it made him curious.<p></p>
-          <p style="font-size: 20px">“I’ve never seen you here before, where abouts are you from?”<p></p>
-          <p style="font-size: 20px">“Oh no, I’m no fae ‘roond here son, I just come down to wet ma lips every so often and blather wi the locals”<p></p>
-          <p style="font-size: 20px">“Well it was nice talking to ye, I better head oaf, my supper will getting cold hehe.”<p></p>
+          p style=font-size 20px“...Do you fish”pp
+          p style=font-size 20px“Pardon me, son”pp
+          p style=font-size 20px“I said are you fisherman”pp
+          p style=font-size 20px“No, you asked me if I fish. I do fish, but I’m no a fisher man”.pp
+          p style=font-size 20px“Oh right…” he takes a sip of his pint.pp
+          p style=font-size 20px“I’m a bus driver like you. Ooohhh I’ve been all over… long time ago mind you sonny”.pp
+          p style=font-size 20pxReggie looks down at the floor and smiles. He feels a strange warmth and connection with the stranger. Usually the pub is filled with regulars he’s seen a million times before, but he’s never seen this old man and it made him curious.pp
+          p style=font-size 20px“I’ve never seen you here before, where abouts are you from”pp
+          p style=font-size 20px“Oh no, I’m no fae ‘roond here son, I just come down to wet ma lips every so often and blather wi the locals”pp
+          p style=font-size 20px“Well it was nice talking to ye, I better head oaf, my supper will getting cold hehe.”pp
           __________________________________________________________________________________
           
-          <p style="font-size: 20px"> Reggie sits slightly mesmerized by the mysterious old man and takes another sip of his beer.
-          He notices the old man left his wallet on the seat. He picks it up and looks inside, finding his driver’s licence.<p></p>
-          <p style="font-size: 20px"><em>Robert McGill<p></p>
-            <p style="font-size: 20px"> D.O.B. 06/10/1944<p></p>
-            <p style="font-size: 20px"> Address: 14 Crescent Ave. The Moon</em><p></p>
-            <p style="font-size: 20px"> He rushes out to see if he can catch the old man and spots him outside, standing next to a darkly coloured bus that glows in the moonlight. The old man pauses for a moment before getting in, turns around with a smile and winks at Reggie before climbing into the driver's seat and taking off towards the moon.
-          The next day Reggie is back driving the bus, still in disbelief from what he saw the night before. He looks down at his bottle of bourbon in the driver’s compartment before continuing on his route.<p></p>
-          </p>
-    </main>
-  </body>
-</html>
+          p style=font-size 20px Reggie sits slightly mesmerized by the mysterious old man and takes another sip of his beer.
+          He notices the old man left his wallet on the seat. He picks it up and looks inside, finding his driver’s licence.pp
+          p style=font-size 20pxemRobert McGillpp
+            p style=font-size 20px D.O.B. 06101944pp
+            p style=font-size 20px Address 14 Crescent Ave. The Moonempp
+            p style=font-size 20px He rushes out to see if he can catch the old man and spots him outside, standing next to a darkly coloured bus that glows in the moonlight. The old man pauses for a moment before getting in, turns around with a smile and winks at Reggie before climbing into the driver's seat and taking off towards the moon.
+          The next day Reggie is back driving the bus, still in disbelief from what he saw the night before. He looks down at his bottle of bourbon in the driver’s compartment before continuing on his route.pp
+          p
+    main
+  body
+html

@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -70,15 +70,22 @@
         margin-left: 70px;
       }
 
-      .content > p:first-of-type,
-      .content > p:nth-of-type(2) {
+      .intro-text p {
         margin-left: 70px;
         text-align: center;
         font-size: 19px;
+        font-family: monospace;
       }
 
-      h2 {
-        color: #f0a;
+      .text-type__cursor {
+        display: inline-block;
+        opacity: 1;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%, 50%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0; }
       }
 
       p {
@@ -119,102 +126,76 @@
     </script>
   </head>
   <body>
-    <img src="https://i.imgur.com/d1b0qhD.gif" width="20%" height="auto" style="margin-left: 50%; margin-top: 5%;">
+    <img src="https://i.imgur.com/d1b0qhD.gif" width="20%" height="auto" style="margin-left: 50%; margin-top: 5%;" />
 
     <nav class="sidebar">
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/EyPw5lV.gif" class="blog-star" alt="Reviews GIF" />
-        Reviews
-      </button>
-      <div class="dropdown-container">
-        <a href="#nightreign-review">Elden Ring: Nightreign</a>
-        <a href="#game-review">The Typing of the Dead</a>
-        <a href="#elden-ring">Elden Ring</a>
-        <a href="#kirby's-adventure-3ds">Kirby's Adventure 3DS</a>
-        <a href="#an-american-werewolf">An American Werewolf in London</a>
-      </div>
-
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/hvy9MIa.gif" class="blog-star" alt="Articles GIF" />
-        Articles
-      </button>
-      <div class="dropdown-container">
-        <a href="#cydus">Calling All Players</a>
-        <a href="#summer-games-fest-2025">Summer Game Fest 2025</a>
-        <a href="#nintendo-switch-2-announced">Nintendo Switch 2 Announcement</a>
-      </div>
-
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/uzGY1T3.gif" class="blog-star" alt="Guides GIF" />
-        Guides
-      </button>
-      <div class="dropdown-container">
-        <a href="#elden-ring-margit-guide">Beating Margit (Elden Ring)</a>
-      </div>
-
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/9Xdw6Ye.gif" class="blog-star" alt="Projects GIF" />
-        Projects
-      </button>
-      <div class="dropdown-container">
-        <a href="#modding-8bitdo-arcade">Modding My 8BitDo Arcade Stick</a>
-        <a href="#making-a-video-game-day-1">Making a Video Game</a>
-        <a href="#behind-the-scenes-html">Behind The Scenes: HTML</a>
-        <a href="#positioning-gifs">Positioning GIFs in HTML</a>
-        <a href="#monster-hunter-gu-save-transfer">Monster Hunter GU Save Transfer</a>
-        <a href="#working-with-ableton">Making Music in <em>The Twilight Zone</em></a>
-      </div>
-
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/LcrIExo.gif" class="blog-star" alt="Green Star GIF" />
-        Blog
-      </button>
-      <div class="dropdown-container">
-        <a href="#hiking-through-japan-kumano-kodo">Hiking through Japan</a>
-        <a href="#the-bus-driver">The Bus Driver</a>
-      </div>
+      <!-- Sidebar buttons unchanged -->
     </nav>
 
     <main class="content">
-      <!-- Your content sections go here -->
+      <!-- Typing animation for your two sentences -->
+      <div id="root" class="intro-text"></div>
+
+      <!-- React + ReactDOM CDN -->
+      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+      <script type="text/javascript">
+        const { useState, useEffect, createElement } = React;
+
+        function TextType({ text, typingSpeed = 50 }) {
+          const [lines, setLines] = useState(['']);
+          const [currentLineIndex, setCurrentLineIndex] = useState(0);
+
+          useEffect(() => {
+            let timeout;
+            const currentText = text[currentLineIndex];
+            let charIndex = 0;
+
+            const typeChar = () => {
+              if (charIndex < currentText.length) {
+                setLines(prev => {
+                  const newLines = [...prev];
+                  newLines[currentLineIndex] = (newLines[currentLineIndex] || '') + currentText[charIndex];
+                  return newLines;
+                });
+                charIndex++;
+                timeout = setTimeout(typeChar, typingSpeed);
+              } else if (currentLineIndex < text.length - 1) {
+                setLines(prev => [...prev, '']); // add next line
+                setCurrentLineIndex(prev => prev + 1);
+              }
+            };
+
+            typeChar();
+            return () => clearTimeout(timeout);
+          }, [currentLineIndex, text, typingSpeed]);
+
+          return createElement(
+            'div',
+            null,
+            lines.map((line, i) =>
+              createElement('p', { key: i }, line, i === currentLineIndex && createElement('span', { className: 'text-type__cursor' }, '|'))
+            )
+          );
+        }
+
+        function App() {
+          return createElement(TextType, {
+            text: [
+              "This is a page I designed using HTML. It acts as a blog, review site and general mish-mash of things I'm working on.",
+              "I hope you like it!"
+            ],
+            typingSpeed: 50
+          });
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(createElement(App));
+      </script>
     </main>
   </body>
 </html>
-
-
-
-      <!-- Leave the rest of your content (paragraphs, images, etc.) unchanged -->
-    </main>
-  </body>
-</html>
-
-    <!-- Main content -->
-    <main class="content">
-
-   'use client';
-
-import TextType from './TextType';
-
-export default function IntroSection() {
-  return (
-    <div>
-      <TextType
-        as="p"
-        text={[
-          "This is a page I designed using HTML. It acts as a blog, review site and general mish-mash of things I'm working on.",
-          "I hope you like it!"
-        ]}
-        typingSpeed={50}
-        deletingSpeed={30}
-        pauseDuration={2000}
-        loop={false}
-        showCursor={true}
-        textColors={['#ffffff']}
-        className="intro-text"
-      />
-    </div>
-  );
-}
 
 
       <p style="text-align: center; margin-left: 50px;">

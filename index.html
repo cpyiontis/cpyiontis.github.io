@@ -190,20 +190,118 @@
 
     <!-- Main content -->
     <main class="content">
+<div id="intro" class="intro-text"></div>
 
-      <p> 
-  This is a page I designed using HTML. It acts as a blog, review site and
-  general mish-mash of things I'm working on.
-</p>
-<p>
-  I hope you like it!
-</p>
-      <p>
-  You can check out my socials here:
-  <a href="https://www.facebook.com/casimiryiontis/">Facebook</a>,
-  <a href="https://www.instagram.com/cpyiontis/">Instagram</a>,
-  <a href="https://x.com/cyizax_/">X</a>
-</p>
+  <style>
+    .typing-cursor {
+      display: inline-block;
+      width: 1ch;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
+
+  <script>
+    const lines = [
+      "Welcome to my website. I hope you like it here!",
+      "You can check out my socials here: "
+    ];
+
+    const links = [
+      { text: "Facebook", href: "https://www.facebook.com/casimiryiontis/" },
+      { text: "Instagram", href: "https://www.instagram.com/cpyiontis/" },
+      { text: "X", href: "https://x.com/cyizax_/" }
+    ];
+
+    const introContainer = document.getElementById('intro');
+
+    function createParagraph() {
+      const p = document.createElement('p');
+      p.style.marginLeft = '70px';
+      p.style.textAlign = 'center';
+      p.style.fontSize = '19px';
+      p.style.fontFamily = 'monospace';
+      introContainer.appendChild(p);
+      return p;
+    }
+
+    function typeText(p, text, speed, callback) {
+      let index = 0;
+      function typeChar() {
+        if (index < text.length) {
+          p.textContent += text[index];
+          index++;
+          setTimeout(typeChar, speed);
+        } else if (callback) {
+          callback();
+        }
+      }
+      typeChar();
+    }
+
+    function typeLinks(p, links, index = 0, speed = 50, callback) {
+      if (index >= links.length) {
+        if (callback) callback();
+        return;
+      }
+
+      const link = links[index];
+      const a = document.createElement('a');
+      a.href = link.href;
+      a.textContent = '';
+      p.appendChild(a);
+
+      let charIndex = 0;
+
+      function typeLinkChar() {
+        if (charIndex < link.text.length) {
+          a.textContent += link.text[charIndex];
+          charIndex++;
+          setTimeout(typeLinkChar, speed);
+        } else {
+          if (index < links.length - 1) {
+            p.innerHTML += ", ";
+          }
+          typeLinks(p, links, index + 1, speed, callback);
+        }
+      }
+
+      typeLinkChar();
+    }
+
+    function typeLinesSequentially(lines, links, speed = 50, lineIndex = 0) {
+      if (lineIndex >= lines.length) return;
+
+      const p = createParagraph();
+
+      const cursor = document.createElement('span');
+      cursor.className = 'typing-cursor';
+      cursor.textContent = '|';
+      p.appendChild(cursor);
+
+      function typeCurrentLine() {
+        typeText(p, lines[lineIndex], speed, () => {
+          if (lineIndex === lines.length - 1) {
+            typeLinks(p, links, 0, speed, () => {
+              cursor.remove();
+            });
+          } else {
+            cursor.remove();
+          }
+          typeLinesSequentially(lines, links, speed, lineIndex + 1);
+        });
+      }
+
+      typeCurrentLine();
+    }
+
+    typeLinesSequentially(lines, links);
+  </script>
+     
 <br>
 <br>
     

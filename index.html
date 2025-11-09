@@ -57,25 +57,9 @@
       }
 
       main.content {
-  margin-left: 260px; /* make sure content clears sidebar */
-  padding: 20px 40px;
-  box-sizing: border-box;
-}
-
-h1, .intro-text p {
-  margin-left: 0; /* remove extra left margin */
-  text-align: center;
-}
-
-img#intro-logo { 
-  display: block;
-  margin: 5% auto 0 auto; /* centre the intro GIF */
-}
-
-p {
-  font-size: 20px;
-  line-height: 1.5;
-}
+        margin-left: 240px;
+        padding: 20px 40px;
+      }
 
       h1 {
         color: pink;
@@ -206,100 +190,23 @@ p {
 
     <!-- Main content -->
     <main class="content">
-  <div id="intro" class="intro-text"></div>
 
-  <script>
-    const lines = [
-      "Welcome to my website. I hope you like it!",
-      "You can check out my socials here: "
-    ];
-
-    const links = [
-      { text: "Facebook", href: "https://www.facebook.com/casimiryiontis/" },
-      { text: "Instagram", href: "https://www.instagram.com/cpyiontis/" },
-      { text: "X", href: "https://x.com/cyizax_/" }
-    ];
-
-    const introContainer = document.getElementById('intro');
-
-    function createParagraph(text) {
-      const p = document.createElement('p');
-      p.style.marginLeft = '70px';
-      p.style.textAlign = 'center';
-      p.style.fontSize = '19px';
-      p.style.fontFamily = 'monospace';
-      p.textContent = text || '';
-      introContainer.appendChild(p);
-      return p;
-    }
-
-    function typeText(p, text, speed, callback) {
-      let index = 0;
-      function typeChar() {
-        if (index < text.length) {
-          p.textContent += text[index];
-          index++;
-          setTimeout(typeChar, speed);
-        } else if (callback) {
-          callback();
-        }
-      }
-      typeChar();
-    }
-
-    function typeLinks(p, links, index = 0, speed = 50) {
-      if (index >= links.length) return;
-
-      const link = links[index];
-      const a = document.createElement('a');
-      a.href = link.href;
-      a.textContent = '';
-      p.appendChild(a);
-
-      let charIndex = 0;
-
-      function typeLinkChar() {
-        if (charIndex < link.text.length) {
-          a.textContent += link.text[charIndex];
-          charIndex++;
-          setTimeout(typeLinkChar, speed);
-        } else {
-          // Add comma and space except after last link
-          if (index < links.length - 1) {
-            p.innerHTML += ", ";
-          }
-          typeLinks(p, links, index + 1, speed);
-        }
-      }
-
-      typeLinkChar();
-    }
-
-    // Sequentially type each line
-    function typeLinesSequentially(lines, links, speed = 50, lineIndex = 0) {
-      if (lineIndex >= lines.length) return;
-
-      const p = createParagraph('');
-      const line = lines[lineIndex];
-
-      typeText(p, line, speed, () => {
-        if (lineIndex === lines.length - 1) {
-          typeLinks(p, links, 0, speed);
-        }
-        // Proceed to next line
-        typeLinesSequentially(lines, links, speed, lineIndex + 1);
-      });
-    }
-
-    typeLinesSequentially(lines, links);
-  </script>
-</main>
-</main>
-     
+      <p> 
+  This is a page I designed using HTML. It acts as a blog, review site and
+  general mish-mash of things I'm working on.
+</p>
+<p>
+  I hope you like it!
+</p>
+      <p>
+  You can check out my socials here:
+  <a href="https://www.facebook.com/casimiryiontis/">Facebook</a>,
+  <a href="https://www.instagram.com/cpyiontis/">Instagram</a>,
+  <a href="https://x.com/cyizax_/">X</a>
+</p>
 <br>
 <br>
-      
-    
+
 <h2>Why I Love Dragon Quest</h2>
 <h2 style="color: #aaa; font-family: Arial, sans-serif; font-weight: normal; font-size: 20px; margin-top: 10px; text-align: left;">
 Come closer and I’ll tell you.
@@ -311,6 +218,7 @@ Come closer and I’ll tell you.
 
 <p>I’ll start by saying: I don’t particularly like turn-based RPGs. I would classify the majority of the genre as ‘Press A to beat the game’. They often lack the freedom that makes gaming so great to me. You might as well be playing an interactive cutscene in the special features menu of a DVD or reading a choose-your-own-adventure book.</p>
 
+<p>I get it, though. Not every game has to involve split-second reactions and challenging boss fights. But to make a game like that appealing to somebody who doesn’t usually play that sort of thing, it’s got to have some razzle-dazzle. And possibly some Zing, Sizzle, and Kafrizzle as well.</p>
 <p>I get it, though. Not every game has to involve split-second reactions and challenging boss fights. But to make a game like that appealing to somebody who doesn’t usually play that sort of thing, it’s got to have some razzle-dazzle. And in this case, some <em>Zing</em>, <em>Sizzle</em>, and <em>Kafrizzle</em> as well.</p>
 
 <p>So, what makes <em>Dragon Quest</em> different? It all comes down to two things: sound and visuals.</p>
@@ -447,7 +355,7 @@ Playing with friends is the best experience, while random matchmaking can be fru
         <p>It’s estimated there are over 20,000 internet cafés worldwide, with 65 in Melbourne. Among them, Cydus stands out. First opened in 2000, it is the longest-running internet café in the city — and it’s about to celebrate it's 25th birthday.</p>
 
         <p>But before we leap into celebrations, a quick look at the history of internet cafés...</p>
-      
+
         <p>Originally designed as places to meet friends, surf the web, and enjoy a cup of coffee, internet cafés have since become increasingly game-focused.</p>
 
         <p>When they first appeared, most people had no way of checking their emails outside of homes and offices. The introduction of free web-based services like Hotmail sent their popularity soaring.</p>
@@ -626,7 +534,7 @@ Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusi
       <h2 id="hiking-through-japan-kumano-kodo">Hiking through Japan: Kumano Kodo</h2>
       <p><em>01/06/2024</em></p>
       <p>
-      
+
 <br>
 <br>
        <h2 id="working-with-ableton">Making Music in <em>The Twilight Zone</em></h2>
@@ -634,7 +542,7 @@ Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusi
     <p style="font-size: 20px">In this project I used voice samples from the episode <em>"What You Need"</em> (Season 1
       Episode 12) of The Twlight Zone to make a dance track. <p style="font-size: 20px">It was a very enjoyable process and I had a lot of fun getting to know how to use Ableton. </p>
       <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1484837161&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/casimir-yiontis" title="Caz" target="_blank" style="color: #cccccc; text-decoration: none;">Caz</a> · <a href="https://soundcloud.com/casimir-yiontis/slippery-shoes" title="Slippery Shoes" target="_blank" style="color: #cccccc; text-decoration: none;">Slippery Shoes</a></div>
-    
+
       <h2 id="an-american-werewolf">Review</h2>
     <h2><em>An American Werewolf in London</em></h2>
     <p><em>12/10/2023</em></p>
@@ -644,21 +552,21 @@ Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusi
 <p style="font-size: 20px">John Landis's "An American Werewolf in London" is a timeless classic that merges horror and dark comedy with groundbreaking special effects. Released in 1981, this film remains a standout in the werewolf genre, known for its innovative use of transformation effects by Rick Baker, which earned him the first Academy Award for Best Makeup.<p></p>
 
 <p style="font-size: 20px">The story follows two American backpackers, David (played by David Naughton) and Jack (played by Griffin Dunne), who encounter a horrifying creature while hiking across the English countryside. Jack is killed by the creature, and David wakes up in a London hospital to discover he is now cursed to become a werewolf.<p></p>
-  
+
   <p style="font-size: 20px">The film's strength lies in its ability to blend horror with humor seamlessly. Landis deftly navigates between moments of genuine tension and absurdity, creating an atmosphere that keeps the audience on edge while also allowing for moments of dark comedy. The interactions between David and the increasingly decomposed ghost of Jack provide much of the film's humor, serving as both comic relief and a chilling reminder of David's impending doom.<p></p>
-  
+
   <p style="font-size: 20px">Rick Baker's makeup and special effects work in "An American Werewolf in London" remains unparalleled even by today's standards. The werewolf transformation scene, in particular, is a masterclass in practical effects, as David painfully contorts and changes into a creature of nightmares. The visceral nature of the transformation, combined with David's desperate attempts to come to terms with his new reality, evokes both sympathy and terror.<p></p>
-  
+
   <p style="font-size: 20px">Beyond its technical achievements, the film also explores deeper themes of identity, guilt, and the consequences of one's actions. David's struggle with his newfound monstrous nature serves as a metaphor for the loss of innocence and the darker aspects of humanity that lie within us all.<p></p>
-  
+
   <p style="font-size: 20px">In addition to the compelling performances by Naughton and Dunne, Jenny Agutter and John Woodvine deliver strong supporting roles, grounding the fantastical elements of the story in a believable reality.<p></p>
-  
+
   <p style="font-size: 20px">"An American Werewolf in London" remains a must-watch for horror enthusiasts and film buffs alike, not only for its groundbreaking effects but also for its ability to blend scares with laughs and its exploration of deeper themes. It's a film that has stood the test of time and continues to influence the horror genre to this day, making it a true classic in every sense.<p></p>
-  
+
   <p style="font-size: 20px"><em></em>Rating: 4.5/5<em></em><p></p>
-  
+
   <p style="font-size: 20px">"An American Werewolf in London" is a rare gem that successfully marries horror, comedy, and pathos, offering a cinematic experience that lingers long after the credits roll.</p>
-      
+
 
         <h2 id="elden-ring">Review</h2>
         <h2>Elden Ring</h2>
@@ -671,7 +579,7 @@ Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusi
 <p style="font-size: 20px">Elden Ring transports players to the mythical land of the Lands Between, a sprawling open-world setting that exudes both beauty and desolation. From verdant forests to towering mountains and eerie ruins, every corner of this world is meticulously crafted to evoke a sense of wonder and danger. The landscape is teeming with formidable enemies, hidden treasures, and secrets waiting to be unearthed.</p>
 <p style="font-size: 20px">True to FromSoftware’s legacy, Elden Ring offers challenging gameplay that rewards perseverance and strategic thinking. Players can create their character, choosing from a variety of classes and abilities that cater to different playstyles.</p>
 <p style="font-size: 20px">Combat is intense and methodical, requiring precise timing, careful observation of enemy patterns, and utilization of a wide array of weapons and magic.
- 
+
 <p style="font-size: 20px">The introduction of new mechanics adds fresh layers to gameplay, granting players access to powerful abilities and enhancing their combat prowess. This system encourages exploration and experimentation, as uncovering the mysteries surrounding the Elden Ring is key to unlocking its full potential.</p>
 <p style="font-size: 20px">The ability to jump is a revolutionary mechanic in FromSoft games and one that left players dumbfounded in the original gameplay trailers.</p>
 <p style="font-size: 20px">One of the most striking aspects of Elden Ring is its storytelling, heavily influenced by George R.R. Martin’s touch. The narrative depth and world-building are impressive, with lore intricately woven into the fabric of the game. Each location, character, and item contributes to a larger tapestry of mythology and history. The storytelling is often cryptic yet compelling, inviting players to piece together fragments of the world’s past and present. The atmosphere is hauntingly beautiful, enhanced by a dynamic day-night cycle and weather system that subtly shifts the mood of the environment.</p>
@@ -692,15 +600,15 @@ Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusi
         width="40%"
         height="auto">
 
-      
-        
+
+
 
         <h2><strong>The Bus Driver</strong></h2>
         <p></p><em>22/06/2022</em></p>
-  
+
           <p style="font-size: 20px">Reggie, a bus driver and an alcoholic is finishing his route for the night and stops for a pint on his way home at his usual pub: The Silver Moon Inn. He starts talking to an old man who he’s never seen before. The old man remarks on his bus driver uniform, and says he used to be a bus driver a long time ago, in outer space. He regales Reggie with stories about his trips through outer space and tells him that he’s from the moon. He shows him a bus drivers licence made of cardboard with his intergalactic credentials on it. Reggie doesn’t believe the old man of course, thinking he’s probably just a drunken senile old man. As he leaves the pub, he spots the old man down the street. The old man turns and winks at Reggie before he transforms into a cloud of stars and soars towards the moon.
           The next day Reggie is driving his usual route and glances down at his bottle of bourbon in the drivers’ compartment, clinking away, before continuing on his journey.</p>
-          
+
           <p style="font-size: 20px"><strong>At the pub</strong></p>
           <p style="font-size: 20px">Reggie sits alone in a booth, looking around the pub at the various goings-ons. Some teenagers playing pool, old people on the slot machines. </p>
           <p style="font-size: 20px">“Mind if I join you?”</p>
@@ -714,11 +622,11 @@ Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusi
           <p style="font-size: 20px">“Which routes are you oan?”<p></p>
           <p style="font-size: 20px">“Black rock through Brighton is my usual”<p></p>
           <p style="font-size: 20px">“Oooh I’ve been to black rock, lovely spot for fishing”<p></p>
-          
+
           <p></p>
           <p style="font-size: 20px"><em>There’s a foreboding silence between the two.</em><p></p>
           <p></p>
-  
+
           <p style="font-size: 20px">“...Do you fish?”<p></p>
           <p style="font-size: 20px">“Pardon me, son?”<p></p>
           <p style="font-size: 20px">“I said are you fisherman?”<p></p>
@@ -730,7 +638,7 @@ Capcom pulls back the curtain on <em>Resident Evil 9</em>, the chilling conclusi
           <p style="font-size: 20px">“Oh no, I’m no fae ‘roond here son, I just come down to wet ma lips every so often and blather wi the locals”<p></p>
           <p style="font-size: 20px">“Well it was nice talking to ye, I better head oaf, my supper will getting cold hehe.”<p></p>
           __________________________________________________________________________________
-          
+
           <p style="font-size: 20px"> Reggie sits slightly mesmerized by the mysterious old man and takes another sip of his beer.
           He notices the old man left his wallet on the seat. He picks it up and looks inside, finding his driver’s licence.<p></p>
           <p style="font-size: 20px"><em>Robert McGill<p></p>

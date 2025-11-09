@@ -190,24 +190,11 @@
 
     <!-- Main content -->
     <main class="content">
-<div id="intro" class="intro-text"></div>
-
-  <style>
-    .typing-cursor {
-      display: inline-block;
-      width: 1ch;
-      animation: blink 1s step-start infinite;
-    }
-
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      51%, 100% { opacity: 0; }
-    }
-  </style>
+  <div id="intro" class="intro-text"></div>
 
   <script>
     const lines = [
-      "Welcome to my website. I hope you like it here!",
+"Welcome to my website. I hope you like it here!",
       "You can check out my socials here: "
     ];
 
@@ -219,12 +206,13 @@
 
     const introContainer = document.getElementById('intro');
 
-    function createParagraph() {
+    function createParagraph(text) {
       const p = document.createElement('p');
       p.style.marginLeft = '70px';
       p.style.textAlign = 'center';
       p.style.fontSize = '19px';
       p.style.fontFamily = 'monospace';
+      p.textContent = text || '';
       introContainer.appendChild(p);
       return p;
     }
@@ -243,11 +231,8 @@
       typeChar();
     }
 
-    function typeLinks(p, links, index = 0, speed = 50, callback) {
-      if (index >= links.length) {
-        if (callback) callback();
-        return;
-      }
+    function typeLinks(p, links, index = 0, speed = 50) {
+      if (index >= links.length) return;
 
       const link = links[index];
       const a = document.createElement('a');
@@ -263,48 +248,41 @@
           charIndex++;
           setTimeout(typeLinkChar, speed);
         } else {
+          // Add comma and space except after last link
           if (index < links.length - 1) {
             p.innerHTML += ", ";
           }
-          typeLinks(p, links, index + 1, speed, callback);
+          typeLinks(p, links, index + 1, speed);
         }
       }
 
       typeLinkChar();
     }
 
+    // Sequentially type each line
     function typeLinesSequentially(lines, links, speed = 50, lineIndex = 0) {
       if (lineIndex >= lines.length) return;
 
-      const p = createParagraph();
+      const p = createParagraph('');
+      const line = lines[lineIndex];
 
-      const cursor = document.createElement('span');
-      cursor.className = 'typing-cursor';
-      cursor.textContent = '|';
-      p.appendChild(cursor);
-
-      function typeCurrentLine() {
-        typeText(p, lines[lineIndex], speed, () => {
-          if (lineIndex === lines.length - 1) {
-            typeLinks(p, links, 0, speed, () => {
-              cursor.remove();
-            });
-          } else {
-            cursor.remove();
-          }
-          typeLinesSequentially(lines, links, speed, lineIndex + 1);
-        });
-      }
-
-      typeCurrentLine();
+      typeText(p, line, speed, () => {
+        if (lineIndex === lines.length - 1) {
+          typeLinks(p, links, 0, speed);
+        }
+        // Proceed to next line
+        typeLinesSequentially(lines, links, speed, lineIndex + 1);
+      });
     }
 
     typeLinesSequentially(lines, links);
   </script>
+</main>
      
 <br>
 <br>
-    
+      
+<h2 id="top10-songs">Caz’s Top 10 Australian Songs Of All Time</h2>    
 <h2>Why I Love Dragon Quest</h2>
 <h2 style="color: #aaa; font-family: Arial, sans-serif; font-weight: normal; font-size: 20px; margin-top: 10px; text-align: left;">
 Come closer and I’ll tell you.

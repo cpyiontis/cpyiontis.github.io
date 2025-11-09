@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -11,6 +11,14 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+      }
+
+      .header-gif {
+        width: 15%;
+        height: auto;
+        display: block;
+        margin-left: 51%;
+        margin-top: 5%;
       }
 
       .sidebar {
@@ -112,21 +120,31 @@
           dropdowns[i].addEventListener("click", function () {
             this.classList.toggle("active");
             const dropdownContent = this.nextElementSibling;
-            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+            if (!dropdownContent) return;
+            dropdownContent.style.display =
+              dropdownContent.style.display === "block" ? "none" : "block";
           });
         }
       });
     </script>
   </head>
   <body>
-    <img src="https://i.imgur.com/d1b0qhD.gif" width="15%" height="auto" style="margin-left: 51%; margin-top: 5%;">
+    <img
+      src="https://i.imgur.com/d1b0qhD.gif"
+      alt="Header GIF"
+      class="header-gif"
+    />
 
-    <nav class="sidebar">
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/EyPw5lV.gif" class="blog-star" alt="Reviews GIF" />
+    <nav class="sidebar" aria-label="Main navigation">
+      <button class="dropdown-btn blog-button" aria-expanded="false">
+        <img
+          src="https://i.imgur.com/EyPw5lV.gif"
+          class="blog-star"
+          alt="Reviews GIF"
+        />
         Reviews
       </button>
-      <div class="dropdown-container">
+      <div class="dropdown-container" aria-hidden="true">
         <a href="#nightreign-review">Elden Ring: Nightreign</a>
         <a href="#game-review">The Typing of the Dead</a>
         <a href="#elden-ring">Elden Ring</a>
@@ -134,29 +152,41 @@
         <a href="#an-american-werewolf">An American Werewolf in London</a>
       </div>
 
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/hvy9MIa.gif" class="blog-star" alt="Articles GIF" />
+      <button class="dropdown-btn blog-button" aria-expanded="false">
+        <img
+          src="https://i.imgur.com/hvy9MIa.gif"
+          class="blog-star"
+          alt="Articles GIF"
+        />
         Articles
       </button>
-      <div class="dropdown-container">
+      <div class="dropdown-container" aria-hidden="true">
         <a href="#cydus">Melbourne’s oldest internet café celebrates it's 25th birthday</a>
         <a href="#summer-games-fest-2025">Summer Game Fest 2025</a>
         <a href="#nintendo-switch-2-announced">Nintendo Switch 2 Announcement</a>
       </div>
 
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/uzGY1T3.gif" class="blog-star" alt="Guides GIF" />
+      <button class="dropdown-btn blog-button" aria-expanded="false">
+        <img
+          src="https://i.imgur.com/uzGY1T3.gif"
+          class="blog-star"
+          alt="Guides GIF"
+        />
         Guides
       </button>
-      <div class="dropdown-container">
+      <div class="dropdown-container" aria-hidden="true">
         <a href="#elden-ring-margit-guide">Beating Margit (Elden Ring)</a>
       </div>
 
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/9Xdw6Ye.gif" class="blog-star" alt="Projects GIF" />
+      <button class="dropdown-btn blog-button" aria-expanded="false">
+        <img
+          src="https://i.imgur.com/9Xdw6Ye.gif"
+          class="blog-star"
+          alt="Projects GIF"
+        />
         Projects
       </button>
-      <div class="dropdown-container">
+      <div class="dropdown-container" aria-hidden="true">
         <a href="#modding-8bitdo-arcade">Modding My 8BitDo Arcade Stick</a>
         <a href="#making-a-video-game-day-1">Making a Video Game</a>
         <a href="#behind-the-scenes-html">Behind The Scenes: HTML</a>
@@ -165,41 +195,29 @@
         <a href="#working-with-ableton">Making Music in <em>The Twilight Zone</em></a>
       </div>
 
-      <button class="dropdown-btn blog-button">
-        <img src="https://i.imgur.com/LcrIExo.gif" class="blog-star" alt="Green Star GIF" />
+      <button class="dropdown-btn blog-button" aria-expanded="false">
+        <img
+          src="https://i.imgur.com/LcrIExo.gif"
+          class="blog-star"
+          alt="Green Star GIF"
+        />
         Blog
       </button>
-      <div class="dropdown-container">
+      <div class="dropdown-container" aria-hidden="true">
         <a href="#hiking-through-japan-kumano-kodo">Hiking through Japan</a>
         <a href="#the-bus-driver">The Bus Driver</a>
       </div>
     </nav>
 
-    <main class="content">
-      <!-- Your content sections go here -->
-    </main>
-  </body>
-</html>
+    <main class="content" role="main">
+      <p>Welcome to my website. I hope you like it!</p>
 
-
-
-      <!-- Leave the rest of your content (paragraphs, images, etc.) unchanged -->
-    </main>
-  </body>
-</html>
-
-    <!-- Main content -->
-    <main class="content">
-
-      <p> 
-  Welcome to my website. I hope you like it!
-</p>
       <p>
-  You can check out my socials here:
-  <a href="https://www.facebook.com/casimiryiontis/">Facebook</a>,
-  <a href="https://www.instagram.com/cpyiontis/">Instagram</a>,
-  <a href="https://x.com/cyizax_/">X</a>
-</p>
+        You can check out my socials here:
+        <a href="https://www.facebook.com/casimiryiontis/">Facebook</a>,
+        <a href="https://www.instagram.com/cpyiontis/">Instagram</a>,
+        <a href="https://x.com/cyizax_/">X</a>
+      </p>
 <br>
 <br>
 

@@ -194,7 +194,7 @@
 
   <script>
     const lines = [
-"Welcome to my website. I hope you like it!",
+      "Welcome to my website. I hope you like it!",
       "You can check out my socials here: "
     ];
 
@@ -206,13 +206,12 @@
 
     const introContainer = document.getElementById('intro');
 
-    function createParagraph(text) {
+    function createParagraph() {
       const p = document.createElement('p');
       p.style.marginLeft = '70px';
       p.style.textAlign = 'center';
       p.style.fontSize = '19px';
       p.style.fontFamily = 'monospace';
-      p.textContent = text || '';
       introContainer.appendChild(p);
       return p;
     }
@@ -231,8 +230,11 @@
       typeChar();
     }
 
-    function typeLinks(p, links, index = 0, speed = 50) {
-      if (index >= links.length) return;
+    function typeLinks(p, links, index = 0, speed = 50, callback) {
+      if (index >= links.length) {
+        if (callback) callback();
+        return;
+      }
 
       const link = links[index];
       const a = document.createElement('a');
@@ -248,31 +250,40 @@
           charIndex++;
           setTimeout(typeLinkChar, speed);
         } else {
-          // Add comma and space except after last link
           if (index < links.length - 1) {
             p.innerHTML += ", ";
           }
-          typeLinks(p, links, index + 1, speed);
+          typeLinks(p, links, index + 1, speed, callback);
         }
       }
 
       typeLinkChar();
     }
 
-    // Sequentially type each line
     function typeLinesSequentially(lines, links, speed = 50, lineIndex = 0) {
       if (lineIndex >= lines.length) return;
 
-      const p = createParagraph('');
-      const line = lines[lineIndex];
+      const p = createParagraph();
 
-      typeText(p, line, speed, () => {
-        if (lineIndex === lines.length - 1) {
-          typeLinks(p, links, 0, speed);
-        }
-        // Proceed to next line
-        typeLinesSequentially(lines, links, speed, lineIndex + 1);
-      });
+      const cursor = document.createElement('span');
+      cursor.className = 'typing-cursor';
+      cursor.textContent = '|';
+      p.appendChild(cursor);
+
+      function typeCurrentLine() {
+        typeText(p, lines[lineIndex], speed, () => {
+          if (lineIndex === lines.length - 1) {
+            typeLinks(p, links, 0, speed, () => {
+              cursor.remove();
+            });
+          } else {
+            cursor.remove();
+          }
+          typeLinesSequentially(lines, links, speed, lineIndex + 1);
+        });
+      }
+
+      typeCurrentLine();
     }
 
     typeLinesSequentially(lines, links);
